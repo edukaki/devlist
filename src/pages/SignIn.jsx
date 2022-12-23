@@ -1,18 +1,28 @@
+import { useEffect } from "react";
 import GoogleButton from "react-google-button";
+import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
 const SignIn = () => {
 
-    const { googleSignIn } = UserAuth();
+    const { googleSignIn, user } = UserAuth()
+    const navigate = useNavigate()
 
     const handleGoogleSignIn = async () => {
         try{
             await googleSignIn()
+            navigate('/')
         }
         catch(error){
             console.log(error)
         }
     }
+
+    useEffect(() => {
+    if(user !== null){
+        navigate('/')
+    }
+},[user])
 
     return (
         <>
