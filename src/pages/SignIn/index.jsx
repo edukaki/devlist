@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import GoogleButton from "react-google-button";
 import { useNavigate } from "react-router-dom";
-import { UserAuth } from "../context/AuthContext";
+import { UserAuth } from "../../context/AuthContext";
 
 const SignIn = () => {
 
@@ -22,7 +22,7 @@ const SignIn = () => {
     if(user !== null){
         navigate('/')
     }
-},[user])
+},[navigate, user])
 
     return (
         <>
