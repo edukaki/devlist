@@ -5,9 +5,9 @@ import { UserAuth } from '../../context/AuthContext';
 const Navbar = () => {
 
     const { user } = UserAuth()
+    console.log(user)
 
     return (
-
 
         <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
             <div className="container flex flex-wrap items-center justify-between mx-auto">
@@ -28,7 +28,7 @@ const Navbar = () => {
                         <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow" id="user-dropdown">
                             <ul className="py-1" aria-labelledby="user-menu-button">
                                 <li>
-                                    <Link to='/' className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dashboard</Link>
+                                    <Link to='' className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dashboard</Link>
                                 </li>
                                 <li>
                                     <Link to='' className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</Link>
@@ -46,7 +46,13 @@ const Navbar = () => {
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
                     <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
                         <li>
-                            <Link to='' className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</Link>
+                            <Link to='/' className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</Link>
+                        </li>
+                        <li>
+                            <Link to={
+                                !user ? '/signin' :
+                                `/projects/user?:${user.uid}`} 
+                                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Projects</Link>
                         </li>
                         <li>
                             <Link to='' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</Link>
