@@ -4,6 +4,17 @@ import ProjectCardArea from '../../components/ProjectCardArea'
 import ProjectItem from '../../components/ProjectItem'
 
 const Projects = () => {
+    const newProject = () => {
+        const form = document.querySelector('[data-project-form]')
+        const obj = {
+            name: form.name.value,
+            author: form.author.value,
+            indicator: form.indicator.value,
+            status: form.status.value
+        }
+        form.reset()
+        return obj
+    }
     return (
         <main className='min-h-[100vh]'>
             <ProjectCardArea>
