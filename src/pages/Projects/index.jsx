@@ -6,10 +6,10 @@ const Projects = () => {
     return (
         <main className='min-h-[100vh]'>
             <ProjectCardArea>
-                <ProjectCard title='Opened Projects' content='82' footer='oijoi' fromColor='from-pink-500' toColor='to-purple-500' />
-                <ProjectCard title='test' content='81' footer='test2' fromColor='from-orange-500' toColor='to-red-500' />
-                <ProjectCard title='test' content='82' footer='test2' fromColor='from-emerald-400' toColor='to-teal-600' />
-                <ProjectCard title='test' content='83' footer='test2' fromColor='from-cyan-500' toColor='to-blue-500' />
+                <ProjectCard title='Ongoing' content='sample' footer='Open projects' fromColor='from-amber-400' toColor='to-amber-200' />
+                <ProjectCard title='Closed' content='sample' footer='Closed and achieved projects' fromColor='from-lime-600' toColor='to-amber-200' />
+                <ProjectCard title='Total time' content='sample' footer='Invested in all projects' fromColor='from-lime-300' toColor='to-sky-500' />
+                <ProjectCard title='Remaining time' content='sample' footer='Until all projects deadlines' fromColor='from-red-500' toColor='to-amber-200' />
             </ProjectCardArea>
         </main>
     )
