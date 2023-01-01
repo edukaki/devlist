@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProjectItem = (props) => {
     return (
-        <div className='grid grid-cols-5'>
+        <div className='grid grid-cols-4 text-center py-7'>
             <div>
                 {props.check === true ?
                     <input type='checkbox' /> : ''
