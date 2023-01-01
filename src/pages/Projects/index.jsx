@@ -1,6 +1,7 @@
 import React from 'react'
 import ProjectCard from '../../components/ProjectCard'
 import ProjectCardArea from '../../components/ProjectCardArea'
+import ProjectItem from '../../components/ProjectItem'
 
 const Projects = () => {
     return (
@@ -11,6 +12,14 @@ const Projects = () => {
                 <ProjectCard title='Total time' content='sample' footer='Invested in all projects' fromColor='from-lime-300' toColor='to-sky-500' />
                 <ProjectCard title='Remaining time' content='sample' footer='Until all projects deadlines' fromColor='from-red-500' toColor='to-amber-200' />
             </ProjectCardArea>
+            <ProjectItem project='Project' author='Author' status='Status' indicator='Indicator' />
+            <form data-project-form>
+                <input type="text" name="project" />
+                <input type="text" name="author" />
+                <input type="text" name="indicator" />
+                <input type="text" name="status" />
+            <button>click</button>
+            </form>
         </main>
     )
 }
