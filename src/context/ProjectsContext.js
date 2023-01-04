@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 import { db } from '../firebase/firebase'
 import { collection, doc, setDoc, getDocs } from 'firebase/firestore'
 import { UserAuth } from "./AuthContext";
@@ -34,4 +34,8 @@ export const ProjectContextProvider = ({ children }) => {
             {children}
         </ProjectContext.Provider>
     )
+}
+
+export const UserProject = () => {
+    return useContext(ProjectContext)
 }
