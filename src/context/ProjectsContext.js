@@ -1,15 +1,14 @@
-import { createContext, useState, useMemo } from "react";
+import { createContext, useState } from "react";
 
-export const ProjectContext = createContext(null)
+const ProjectContext = createContext()
 
 
 export const ProjectContextProvider = ({ children }) => {
     const [projectArr, setProjectArr] = useState([])
 
-    const projectMemo = useMemo(() => ({projectArr, setProjectArr}), [projectArr, setProjectArr])
 
     return (
-        <ProjectContext.Provider value={projectMemo}>
+        <ProjectContext.Provider value={{projectArr}}>
             {children}
         </ProjectContext.Provider>
     )
