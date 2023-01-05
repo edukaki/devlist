@@ -13,7 +13,7 @@ const Projects = () => {
         const form = document.querySelector('[data-project-form]')
         const obj = {
             key: uuid(),
-            name: form.project.value,
+            project: form.project.value,
             author: form.author.value,
             indicator: form.indicator.value,
             status: form.status.value
