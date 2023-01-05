@@ -3,6 +3,7 @@ import ProjectCard from '../../components/ProjectCard'
 import ProjectCardArea from '../../components/ProjectCardArea'
 import ProjectItem from '../../components/ProjectItem'
 import { UserProject } from '../../context/ProjectsContext'
+import { v4 as uuid } from 'uuid'
 
 const Projects = () => {
     const { setProject } = UserProject()
@@ -10,6 +11,7 @@ const Projects = () => {
     const newProject = () => {
         const form = document.querySelector('[data-project-form]')
         const obj = {
+            key: uuid(),
             name: form.project.value,
             author: form.author.value,
             indicator: form.indicator.value,
