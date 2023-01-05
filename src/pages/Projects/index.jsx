@@ -4,6 +4,7 @@ import ProjectCardArea from '../../components/ProjectCardArea'
 import ProjectItem from '../../components/ProjectItem'
 import { UserProject } from '../../context/ProjectsContext'
 import { v4 as uuid } from 'uuid'
+import ProjectListItem from '../../components/ProjectListItem'
 
 const Projects = () => {
     const { setProject } = UserProject()
@@ -43,6 +44,7 @@ const Projects = () => {
                     }
                     }>click</button>
             </form>
+            <ProjectListItem />
         </main>
     )
 }
