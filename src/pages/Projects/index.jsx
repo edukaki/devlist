@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ProjectCard from '../../components/ProjectCard'
 import ProjectCardArea from '../../components/ProjectCardArea'
 import ProjectItem from '../../components/ProjectItem'
+import { ProjectContext } from '../../context/ProjectsContext'
 
 const Projects = () => {
+    const { projectArr, setProjectArr } = useContext(ProjectContext)
+    
     const newProject = () => {
         const form = document.querySelector('[data-project-form]')
         const obj = {
@@ -29,7 +32,17 @@ const Projects = () => {
                 <input type="text" name="author" />
                 <input type="text" name="indicator" />
                 <input type="text" name="status" />
-            <button>click</button>
+            <button
+            type='button'
+            onClick={async () => {
+                const project = newProject()
+                setProjectArr(
+                    [...projectArr,
+                        project
+                    ]
+                    )
+                }
+            }>click</button>
             </form>
         </main>
     )
