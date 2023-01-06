@@ -1,7 +1,8 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import { db } from '../firebase/firebase'
-import { collection, doc, setDoc, getDocs } from 'firebase/firestore'
+import { doc, setDoc } from 'firebase/firestore'
 import { UserAuth } from "./AuthContext";
+import useGetData from "../firebase/useGetData";
 
 const ProjectContext = createContext()
 
@@ -18,16 +19,7 @@ export const ProjectContextProvider = ({ children }) => {
         }
     }, [project, user.uid])
 
-    useEffect(() => {
-        const getData = async () => {
-            const data = await getDocs(collection(db, 'users', user.uid, 'projects'))
-            setProjectArr(data.docs.map((doc) => ({
-                ...doc.data(),
-                key: doc.data().key
-            })))
-        }
-        user.uid && getData()
-    }, [project, user.uid])
+    useGetData(user, setProjectArr, project);
 
     return (
         <ProjectContext.Provider value={{ setProject, projectArr }}>
