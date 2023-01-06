@@ -1,7 +1,6 @@
-import { createContext, useState, useEffect, useContext } from "react";
-import { db } from '../firebase/firebase'
-import { doc, setDoc } from 'firebase/firestore'
+import { createContext, useState, useContext } from "react";
 import { UserAuth } from "./AuthContext";
+import useSetData from "../firebase/useSetData";
 import useGetData from "../firebase/useGetData";
 
 const ProjectContext = createContext()
@@ -12,14 +11,9 @@ export const ProjectContextProvider = ({ children }) => {
     const [project, setProject] = useState(null)
     const [projectArr, setProjectArr] = useState([])
 
+    useSetData(project, user)
 
-    useEffect(() => {
-        if (project) {
-            setDoc(doc(db, 'users', user.uid, 'projects', project.key), project)
-        }
-    }, [project, user.uid])
-
-    useGetData(user, setProjectArr, project);
+    useGetData(user, setProjectArr, project)
 
     return (
         <ProjectContext.Provider value={{ setProject, projectArr }}>
