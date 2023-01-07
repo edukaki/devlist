@@ -26,6 +26,14 @@ const Home = () => {
                     <h2>Track your <span>projects</span>. Manage your <span>time</span>. Get things <span>done</span>!</h2>
                     <p>DevNote helps you keep things simple, efficient and organized.</p>
                 </div>
+
+                <div>
+                    <div>
+                        <img src={ongoingIcon} alt="ongoing projects"/>
+                        <h3>Track ongoing projects</h3>
+                        <p>Help you keep your focus on the current project.</p>
+                    </div>
+                </div>
             </section>
         </main>
     )
