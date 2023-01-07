@@ -37,7 +37,13 @@ const Home = () => {
                     <div>
                         <img src={doneIcon} alt="done projects"/>
                         <h3>Organize your projects</h3>
-                        <p>Easily access and visualize your done projects. </p>
+                        <p>Easily access and visualize your done projects.</p>
+                    </div>
+
+                    <div>
+                        <img src={totalTimeIcon} alt="total time invested"/>
+                        <h3>Optmize the time invested</h3>
+                        <p>Keep track of invested time and use it smarter.</p>
                     </div>
                 </div>
             </section>
