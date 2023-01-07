@@ -8,6 +8,10 @@ module.exports = {
       'larger': '768px'
     },
     extend: {},
+    fontFamily: {
+      courier: ["Courier Prime", "monospace"],
+      roboto: ["Roboto", "sans-serif"],
+    }
   },
   plugins: [],
 }
