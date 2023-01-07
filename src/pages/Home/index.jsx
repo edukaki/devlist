@@ -1,9 +1,9 @@
 import React from 'react'
 import heroImageHome from '../../img/home/hero-img.png'
-import ongoingIcon from '../../img/icons/ ongoing-icon.png'
+import ongoingIcon from '../../img/icons/ongoing-icon.png'
 import doneIcon from '../../img/icons/done-icon.png'
 import totalTimeIcon from '../../img/icons/total-time-icon.png'
-import remainingTimeIcon from '../../img/icons/remaining-time-icon.png'
+import remainingTimeIcon from '../../img/icons/remaining-icon.png'
 
 const Home = () => {
     return (
