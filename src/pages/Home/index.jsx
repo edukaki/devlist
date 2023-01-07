@@ -53,6 +53,12 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <section>
+                <h2>Try it out! It's <span>free!</span></h2>
+                <input type="email" placeholder="email"></input>
+                <button type="button">Register</button>
+            </section>
         </main>
     )
 }
