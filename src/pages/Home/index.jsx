@@ -8,8 +8,8 @@ import remainingTimeIcon from '../../img/icons/remaining-icon.png'
 const Home = () => {
     return (
         <main className='min-h-[100vh]'>
-            <section>
-                <div>
+            <section className='flex'>
+                <div className='flex flex-col'>
                     <h1>DevNote</h1>
                     <p>The ultimate <span>free</span> <span>developer</span> tool to keep track of your projects</p>
                     <input type="email" placeholder="email"></input>
