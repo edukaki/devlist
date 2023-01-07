@@ -33,6 +33,12 @@ const Home = () => {
                         <h3>Track ongoing projects</h3>
                         <p>Help you keep your focus on the current project.</p>
                     </div>
+
+                    <div>
+                        <img src={doneIcon} alt="done projects"/>
+                        <h3>Organize your projects</h3>
+                        <p>Easily access and visualize your done projects. </p>
+                    </div>
                 </div>
             </section>
         </main>
