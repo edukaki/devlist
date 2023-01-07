@@ -16,6 +16,13 @@ const Home = () => {
                     <img src={heroImageHome} alt="decorative Devnote features"/>
                 </div>
             </section>
+
+            <section>
+                <div>
+                    <h2>Track your <span>projects</span>. Manage your <span>time</span>. Get things <span>done</span>!</h2>
+                    <p>DevNote helps you keep things simple, efficient and organized.</p>
+                </div>
+            </section>
         </main>
     )
 }
