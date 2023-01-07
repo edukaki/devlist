@@ -45,6 +45,12 @@ const Home = () => {
                         <h3>Optmize the time invested</h3>
                         <p>Keep track of invested time and use it smarter.</p>
                     </div>
+
+                    <div>
+                        <img src={remainingTimeIcon} alt="remaining time"/>
+                        <h3>Deliver within the deadline</h3>
+                        <p>Check the remaining time and work on getting things done.</p>
+                    </div>
                 </div>
             </section>
         </main>
