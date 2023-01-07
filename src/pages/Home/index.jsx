@@ -8,7 +8,7 @@ import remainingTimeIcon from '../../img/icons/remaining-icon.png'
 const Home = () => {
     return (
         <main className='min-h-[100vh]'>
-            <section className='flex'>
+            <section className='flex flex-col-reverse justify-around pt-6 larger:flex-row '>
                 <div className='flex flex-col'>
                     <h1>DevNote</h1>
                     <p>The ultimate <span>free</span> <span>developer</span> tool to keep track of your projects</p>
