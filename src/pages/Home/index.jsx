@@ -9,14 +9,14 @@ const Home = () => {
     return (
         <main className='min-h-[100vh]'>
             <section className='flex flex-col-reverse justify-around pt-6 larger:flex-row '>
-                <div className='flex flex-col'>
-                    <h1>DevNote</h1>
-                    <p>The ultimate <span>free</span> <span>developer</span> tool to keep track of your projects</p>
+                <div className='flex flex-col tracking-wider font-roboto space-y-6 larger:w-4/12 my-auto p-5'>
+                    <h1 className="font-courier font-bold text-4xl text-center pt-3 larger:text-5xl larger:text-left">DevNote</h1>
+                    <p className="text-xl text-center pt-6 larger:text-left">The ultimate <span className="font-courier uppercase font-bold">free</span> <span className="font-courier font-bold">developer</span> tool to keep track of your projects</p>
                     <input type="email" placeholder="email"></input>
                     <button type="button">Register</button>
                 </div>
 
-                <div>
+                <div className="larger:w-5/12 ">
                     <img src={heroImageHome} alt="decorative Devnote features"/>
                 </div>
             </section>
