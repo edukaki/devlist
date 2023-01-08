@@ -22,9 +22,9 @@ const Home = () => {
             </section>
 
             <section>
-                <div>
-                    <h2>Track your <span>projects</span>. Manage your <span>time</span>. Get things <span>done!</span></h2>
-                    <p>DevNote helps you keep things simple, efficient and organized.</p>
+                <div className="my-20 leading-9 font-roboto text-darkGray font-medium text-xl tracking-wider">
+                    <h2 className="text-center">Track your <span className="font-courier font-semibold text-orange">projects</span>. Manage your <span className="font-courier font-semibold text-orange">time</span>. Get things <span className="font-courier font-semibold text-orange">done!</span></h2>
+                    <p className="text-center">DevNote helps you keep things simple, efficient and organized.</p>
                 </div>
 
                 <div>
