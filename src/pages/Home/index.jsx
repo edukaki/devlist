@@ -27,27 +27,27 @@ const Home = () => {
                     <p className="text-center">DevNote helps you keep things simple, efficient and organized.</p>
                 </div>
 
-                <div>
-                    <div>
-                        <img src={ongoingIcon} alt="ongoing projects"/>
+                <div className="grid justify-items-center bg-blue md:grid-cols-2">
+                    <div className="flex flex-col">
+                        <img className="w-52" src={ongoingIcon} alt="ongoing projects"/>
                         <h3>Track ongoing projects</h3>
                         <p>Help you keep your focus on the current project.</p>
                     </div>
 
-                    <div>
-                        <img src={doneIcon} alt="done projects"/>
+                    <div className="flex flex-col">
+                        <img className="w-52" src={doneIcon} alt="done projects"/>
                         <h3>Organize your projects</h3>
                         <p>Easily access and visualize your done projects.</p>
                     </div>
 
-                    <div>
-                        <img src={totalTimeIcon} alt="total time invested"/>
+                    <div className="flex flex-col">
+                        <img className="w-52" src={totalTimeIcon} alt="total time invested"/>
                         <h3>Optmize the time invested</h3>
                         <p>Keep track of invested time and use it smarter.</p>
                     </div>
 
-                    <div>
-                        <img src={remainingTimeIcon} alt="remaining time"/>
+                    <div className="flex flex-col">
+                        <img className="w-52" src={remainingTimeIcon} alt="remaining time"/>
                         <h3>Deliver within the deadline</h3>
                         <p>Check the remaining time and work on getting things done.</p>
                     </div>
