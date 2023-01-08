@@ -23,33 +23,33 @@ const Home = () => {
 
             <section>
                 <div className="my-20 leading-9 font-roboto text-darkGray font-medium text-xl tracking-wider">
-                    <h2 className="text-left">Track your <span className="font-courier font-semibold text-orange">projects</span>. Manage your <span className="font-courier font-semibold text-orange">time</span>. Get things <span className="font-courier font-semibold text-orange">done!</span></h2>
-                    <p className="text-left">DevNote helps you keep things simple, efficient and organized.</p>
+                    <h2 className="text-center">Track your <span className="font-courier font-semibold text-orange">projects</span>. Manage your <span className="font-courier font-semibold text-orange">time</span>. Get things <span className="font-courier font-semibold text-orange">done!</span></h2>
+                    <p className="text-center">DevNote helps you keep things simple, efficient and organized.</p>
                 </div>
 
-                <div className="grid justify-items-center bg-blue md:grid-cols-2">
+                <div className="grid justify-items-center md:grid-cols-2">
                     <div className="flex flex-col">
                         <img className="w-52 place-self-center" src={ongoingIcon} alt="ongoing projects"/>
-                        <h3 className="text-left">Track ongoing projects</h3>
-                        <p className="text-left">Help you keep your focus on the current project.</p>
+                        <h3 className="w-52 text-left">Track ongoing projects</h3>
+                        <p className="w-52 text-left">Help you keep your focus on the current project.</p>
                     </div>
 
                     <div className="flex flex-col">
                         <img className="w-52 place-self-center" src={doneIcon} alt="done projects"/>
-                        <h3 className="text-left">Organize your projects</h3>
-                        <p className="text-left">Easily access and visualize your done projects.</p>
+                        <h3 className="w-52 text-left">Organize your projects</h3>
+                        <p className="w-52 text-left">Easily access and visualize your done projects.</p>
                     </div>
 
                     <div className="flex flex-col">
                         <img className="w-52 place-self-center" src={totalTimeIcon} alt="total time invested"/>
-                        <h3 className="text-left">Optmize the time invested</h3>
-                        <p className="text-left">Keep track of invested time and use it smarter.</p>
+                        <h3 className="w-52 text-left">Optmize the time invested</h3>
+                        <p className="w-52 text-left">Keep track of invested time and use it smarter.</p>
                     </div>
 
                     <div className="flex flex-col">
                         <img className="w-52 place-self-center" src={remainingTimeIcon} alt="remaining time"/>
-                        <h3 className="text-left">Deliver within the deadline</h3>
-                        <p className="text-left">Check the remaining time and work on getting things done.</p>
+                        <h3 className="w-52 text-left">Deliver within the deadline</h3>
+                        <p className="w-52 text-left">Check the remaining time and work on getting things done.</p>
                     </div>
                 </div>
             </section>
