@@ -27,28 +27,28 @@ const Home = () => {
                     <p className="text-center">DevNote helps you keep things simple, efficient and organized.</p>
                 </div>
 
-                <div className="grid justify-items-center md:grid-cols-2">
+                <div className="grid justify-items-center md:grid-cols-2 gap-y-8">
                     <div className="flex flex-col">
                         <img className="w-52 place-self-center" src={ongoingIcon} alt="ongoing projects"/>
-                        <h3 className="w-52 text-left">Track ongoing projects</h3>
+                        <h3 className="w-52 text-left pb-4">Track ongoing projects</h3>
                         <p className="w-52 text-left">Help you keep your focus on the current project.</p>
                     </div>
 
                     <div className="flex flex-col">
                         <img className="w-52 place-self-center" src={doneIcon} alt="done projects"/>
-                        <h3 className="w-52 text-left">Organize your projects</h3>
+                        <h3 className="w-52 text-left pb-4">Organize your projects</h3>
                         <p className="w-52 text-left">Easily access and visualize your done projects.</p>
                     </div>
 
                     <div className="flex flex-col">
                         <img className="w-52 place-self-center" src={totalTimeIcon} alt="total time invested"/>
-                        <h3 className="w-52 text-left">Optmize the time invested</h3>
+                        <h3 className="w-52 text-left pb-4">Optmize the time invested</h3>
                         <p className="w-52 text-left">Keep track of invested time and use it smarter.</p>
                     </div>
 
                     <div className="flex flex-col">
                         <img className="w-52 place-self-center" src={remainingTimeIcon} alt="remaining time"/>
-                        <h3 className="w-52 text-left">Deliver within the deadline</h3>
+                        <h3 className="w-52 text-left pb-4">Deliver within the deadline</h3>
                         <p className="w-52 text-left">Check the remaining time and work on getting things done.</p>
                     </div>
                 </div>
