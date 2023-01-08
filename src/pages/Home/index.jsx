@@ -8,15 +8,15 @@ import remainingTimeIcon from '../../img/icons/remaining-icon.png'
 const Home = () => {
     return (
         <main className='min-h-[100vh]'>
-            <section className='flex flex-col-reverse justify-around pt-6 larger:flex-row text-darkGray'>
-                <div className='flex flex-col tracking-wider font-roboto space-y-6 larger:w-4/12 my-auto p-5'>
-                    <h1 className="font-courier font-bold text-4xl text-center pt-3 larger:text-5xl larger:text-left">DevNote</h1>
-                    <p className="text-xl text-center pt-6 larger:text-left">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
-                    <input className="drop-shadow rounded w-3/4 place-self-center py-1 px-2 larger:place-self-start" type="email" placeholder="email"></input>
+            <section className='flex flex-col-reverse justify-around pt-6 md:flex-row text-darkGray'>
+                <div className='flex flex-col tracking-wider font-roboto space-y-6 md:w-4/12 my-auto p-5'>
+                    <h1 className="font-courier font-bold text-4xl text-center pt-3 md:text-5xl md:text-left">DevNote</h1>
+                    <p className="text-xl text-center pt-6 md:text-left">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
+                    <input className="drop-shadow rounded w-3/4 place-self-center py-1 px-2 md:place-self-start" type="email" placeholder="email"></input>
                     <button type="button">Register</button>
                 </div>
 
-                <div className="larger:w-5/12 ">
+                <div className="md:w-5/12 ">
                     <img src={heroImageHome} alt="decorative Devnote features"/>
                 </div>
             </section>
