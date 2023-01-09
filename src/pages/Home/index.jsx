@@ -54,10 +54,10 @@ const Home = () => {
                 </div>
             </section>
 
-            <section>
+            <section className="my-20 flex flex-col text-center font-roboto">
                 <h2>Try it out! It's <span>free!</span></h2>
                 <input type="email" placeholder="email"></input>
-                <button type="button">Register</button>
+                <button className=""type="button">Register</button>
             </section>
         </main>
     )
