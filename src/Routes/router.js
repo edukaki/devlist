@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Layout from "../Layout/Layout";
 import Projects from "../pages/Projects";
 import SignIn from "../pages/SignIn";
+import { ProjectContextProvider } from "../context/ProjectsContext";
 
 export const router = createBrowserRouter([
     {
@@ -21,7 +22,9 @@ export const router = createBrowserRouter([
                 path: "/projects/:userid",
                 element: (
                     <Protected>
-                        <Projects />
+                        <ProjectContextProvider>
+                            <Projects />
+                        </ProjectContextProvider>
                     </Protected>
                 ),
             },
