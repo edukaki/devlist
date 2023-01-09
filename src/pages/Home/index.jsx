@@ -22,9 +22,9 @@ const Home = () => {
             </section>
 
             <section>
-                <div className="my-20 leading-9 font-roboto text-darkGray font-medium text-xl tracking-wider">
+                <div className="my-20 leading-9 font-roboto text-darkGray font-medium text-xl tracking-wider lg:text-2xl">
                     <h2 className="text-center">Track your <span className="font-courier font-semibold text-orange">projects</span>. Manage your <span className="font-courier font-semibold text-orange">time</span>. Get things <span className="font-courier font-semibold text-orange">done!</span></h2>
-                    <p className="text-center">DevNote helps you keep things simple, efficient and organized.</p>
+                    <p className="text-center mt-4 m-auto md:w-5/12">DevNote helps you keep things simple, efficient and organized.</p>
                 </div>
 
                 <div className="grid justify-items-center font-roboto text-darkGray md:grid-cols-2 gap-y-8">
