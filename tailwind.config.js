@@ -12,11 +12,16 @@ module.exports = {
       blue: '#009EFF',
       green: '#69B848',
     },
-    extend: {},
+    variants: {
+      extend: {
+        backgroundColor: ["active"],
+      },
+    },
+   
     fontFamily: {
       courier: ["Courier Prime", "monospace"],
       roboto: ["Roboto", "sans-serif"],
-    }
+    },
   },
   plugins: [],
 }
