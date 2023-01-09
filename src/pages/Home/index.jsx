@@ -13,7 +13,7 @@ const Home = () => {
                     <h1 className="font-courier font-bold text-4xl text-center pt-3 md:text-5xl md:text-left">DevNote</h1>
                     <p className="text-xl text-center m-auto pt-6 sm:w-2/3 md:text-left md:m-0">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
                     <input className="drop-shadow rounded w-2/5 place-self-center py-1 px-2 md:place-self-start lg:w-3/4" type="email" placeholder="email"></input>
-                    <button className="bg-blue rounded-lg w-auto place-self-center md:place-self-start lg:w-1/2 py-2 px-3 text-white"type="button">Register</button>
+                    <button className="bg-blue rounded-lg w-auto place-self-center py-2 px-3 text-white md:place-self-start lg:w-1/2" type="button">Register</button>
                 </div>
 
                 <div className="md:w-5/12 ">
@@ -54,10 +54,10 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="my-20 flex flex-col text-center font-roboto">
-                <h2>Try it out! It's <span>free!</span></h2>
-                <input type="email" placeholder="email"></input>
-                <button className=""type="button">Register</button>
+            <section className="my-24 flex flex-col w-6/12 space-y-6 text-center m-auto font-roboto md:text-left">
+                <h2 className="mb-12">Try it out! It's <span>free!</span></h2>
+                <input className="drop-shadow rounded w-8/12 place-self-center py-1 px-2 md:place-self-start lg:w-6/12" type="email" placeholder="email"></input>
+                <button className="bg-blue rounded-lg w-auto place-self-center py-2 px-3 text-white md:place-self-start lg:w-3/12" type="button">Register</button>
             </section>
         </main>
     )
