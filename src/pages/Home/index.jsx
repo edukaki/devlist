@@ -1,5 +1,5 @@
 import React from 'react'
-import heroImageHome from '../../img/home/hero-img.png'
+import heroImageHome from '../../img/Home/hero-img.png'
 import ongoingIcon from '../../img/icons/ongoing-icon.png'
 import doneIcon from '../../img/icons/done-icon.png'
 import totalTimeIcon from '../../img/icons/total-time-icon.png'
