@@ -30,26 +30,26 @@ const Home = () => {
                 <div className="grid justify-items-center md:grid-cols-2 gap-y-8">
                     <div className="flex flex-col">
                         <img className="w-40 place-self-center" src={ongoingIcon} alt="ongoing projects"/>
-                        <h3 className="w-48 text-center pb-4 md:text-left">Track ongoing projects</h3>
-                        <p className="w-48 text-center md:text-left lg:w-40">Help you keep your focus on the current project.</p>
+                        <h3 className="w-48 text-center pb-4 tracking-wider md:text-left">Track ongoing projects</h3>
+                        <p className="w-48 text-center md:text-left tracking-wider lg:w-40">Help you keep your focus on the current project.</p>
                     </div>
 
                     <div className="flex flex-col">
                         <img className="w-40 place-self-center" src={doneIcon} alt="done projects"/>
-                        <h3 className="w-48 text-center pb-4 md:text-left">Organize your projects</h3>
-                        <p className="w-48 text-center md:text-left lg:w-40">Easily access and visualize your done projects.</p>
+                        <h3 className="w-48 text-center pb-4 tracking-wider md:text-left">Organize your projects</h3>
+                        <p className="w-48 text-center md:text-left tracking-wider lg:w-40">Easily access and visualize your done projects.</p>
                     </div>
 
                     <div className="flex flex-col">
                         <img className="w-40 place-self-center" src={totalTimeIcon} alt="total time invested"/>
-                        <h3 className="w-48 text-center pb-4 md:text-left">Optmize the time invested</h3>
-                        <p className="w-48 text-center md:text-left lg:w-40">Keep track of invested time and use it smarter.</p>
+                        <h3 className="w-48 text-center pb-4 tracking-wider md:text-left">Optmize the time invested</h3>
+                        <p className="w-48 text-center md:text-left tracking-wider lg:w-40">Keep track of invested time and use it smarter.</p>
                     </div>
 
                     <div className="flex flex-col">
                         <img className="w-40 place-self-center" src={remainingTimeIcon} alt="remaining time"/>
-                        <h3 className="w-48 text-center pb-4 md:text-left">Deliver within the deadline</h3>
-                        <p className="w-48 text-center md:text-left lg:w-40">Check the remaining time and work on getting things done.</p>
+                        <h3 className="w-48 text-center pb-4 tracking-wider md:text-left">Deliver within the deadline</h3>
+                        <p className="w-48 text-center md:text-left tracking-wider lg:w-40">Check the remaining time and work on getting things done.</p>
                     </div>
                 </div>
             </section>
