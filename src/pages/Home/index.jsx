@@ -8,7 +8,7 @@ import InfoCard from '../../components/InfoCard'
 
 const Home = () => {
     return (
-        <main className='min-h-[100vh] scroll-smooth'>
+        <main className='min-h-[100vh] scroll-smooth bg-lightGray'>
             <section className='flex flex-col-reverse justify-around pt-6 md:flex-row text-darkGray'>
                 <div className='flex flex-col tracking-wider font-roboto space-y-6 md:w-6/12 xl:w-5/12 my-auto p-5'>
                     <h1 className="font-courier font-bold text-4xl text-center pt-3 lg:text-5xl md:text-left lg:text-6xl">DevNote</h1>
