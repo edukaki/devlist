@@ -1,16 +1,19 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import ProjectCard from '../../components/ProjectCard'
 import ProjectCardArea from '../../components/ProjectCardArea'
 import ProjectItem from '../../components/ProjectItem'
-import { ProjectContext } from '../../context/ProjectsContext'
+import { UserProject } from '../../context/ProjectsContext'
+import { v4 as uuid } from 'uuid'
+import ProjectListItem from '../../components/ProjectListItem'
 
 const Projects = () => {
-    const { projectArr, setProjectArr } = useContext(ProjectContext)
-    
+    const { setProject } = UserProject()
+
     const newProject = () => {
         const form = document.querySelector('[data-project-form]')
         const obj = {
-            name: form.name.value,
+            key: uuid(),
+            project: form.project.value,
             author: form.author.value,
             indicator: form.indicator.value,
             status: form.status.value
@@ -18,6 +21,7 @@ const Projects = () => {
         form.reset()
         return obj
     }
+
     return (
         <main className='min-h-[100vh]'>
             <ProjectCardArea>
@@ -32,18 +36,15 @@ const Projects = () => {
                 <input type="text" name="author" />
                 <input type="text" name="indicator" />
                 <input type="text" name="status" />
-            <button
-            type='button'
-            onClick={async () => {
-                const project = newProject()
-                setProjectArr(
-                    [...projectArr,
-                        project
-                    ]
-                    )
-                }
-            }>click</button>
+                <button
+                    type='button'
+                    onClick={async () => {
+                        const project = newProject()
+                        setProject(project)
+                    }
+                    }>click</button>
             </form>
+            <ProjectListItem />
         </main>
     )
 }
