@@ -28,7 +28,7 @@ const Home = () => {
                     <p className="text-center mt-4 m-auto md:w-5/12">DevNote helps you keep things simple, efficient and organized.</p>
                 </div>
 
-                <div className="grid justify-items-center font-roboto text-darkGray md:grid-cols-2 gap-y-8">
+                <div className="flex flex-col justify-items-center font-roboto text-darkGray lg:flex-row">
                     <InfoCard
                         src={ongoingIcon}
                         alt="ongoing projects"
