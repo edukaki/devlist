@@ -4,6 +4,7 @@ import ongoingIcon from '../../img/icons/ongoing-icon.png'
 import doneIcon from '../../img/icons/done-icon.png'
 import totalTimeIcon from '../../img/icons/total-time-icon.png'
 import remainingTimeIcon from '../../img/icons/remaining-icon.png'
+import InfoCard from '../../components/InfoCard'
 
 const Home = () => {
     return (
@@ -17,7 +18,7 @@ const Home = () => {
                 </div>
 
                 <div className="md:w-5/12 ">
-                    <img src={heroImageHome} alt="decorative Devnote features"/>
+                    <img src={heroImageHome} alt="decorative Devnote features" />
                 </div>
             </section>
 
@@ -28,29 +29,33 @@ const Home = () => {
                 </div>
 
                 <div className="grid justify-items-center font-roboto text-darkGray md:grid-cols-2 gap-y-8">
-                    <div className="flex flex-col">
-                        <img className="w-32 place-self-center md:place-self-start" src={ongoingIcon} alt="ongoing projects"/>
-                        <h3 className="w-48 text-center pb-4 font-courier font-semibold tracking-wider md:text-left">Track ongoing projects</h3>
-                        <p className="w-48 text-center md:text-left tracking-wider lg:w-40">Help you keep your focus on the current project.</p>
-                    </div>
+                    <InfoCard
+                        src={ongoingIcon}
+                        alt="ongoing projects"
+                        title="Track ongoing projects"
+                        description="Help you keep your focus on the current project.">
+                    </InfoCard>
 
-                    <div className="flex flex-col">
-                        <img className="w-32 place-self-center md:place-self-start" src={doneIcon} alt="done projects"/>
-                        <h3 className="w-48 text-center pb-4 font-courier font-semibold tracking-wider md:text-left">Organize your projects</h3>
-                        <p className="w-48 text-center md:text-left tracking-wider lg:w-40">Easily access and visualize your done projects.</p>
-                    </div>
+                    <InfoCard
+                        src={doneIcon}
+                        alt="done projects"
+                        title="Organize your projects"
+                        description="Easily access and visualize your done projects.">
+                    </InfoCard>
 
-                    <div className="flex flex-col">
-                        <img className="w-32 place-self-center md:place-self-start" src={totalTimeIcon} alt="total time invested"/>
-                        <h3 className="w-48 text-center pb-4 font-courier font-semibold tracking-wider md:text-left">Optmize the time invested</h3>
-                        <p className="w-48 text-center md:text-left tracking-wider lg:w-40">Keep track of invested time and use it smarter.</p>
-                    </div>
+                    <InfoCard
+                        src={totalTimeIcon}
+                        alt="done projects"
+                        title="Optmize the time invested"
+                        description="Keep track of invested time and use it smarter.">
+                    </InfoCard>
 
-                    <div className="flex flex-col">
-                        <img className="w-32 place-self-center md:place-self-start" src={remainingTimeIcon} alt="remaining time"/>
-                        <h3 className="w-48 text-center pb-4 font-courier font-semibold tracking-wider md:text-left">Deliver within the deadline</h3>
-                        <p className="w-48 text-center md:text-left tracking-wider lg:w-42">Check the remaining time and work on getting things done.</p>
-                    </div>
+                    <InfoCard
+                        src={remainingTimeIcon}
+                        alt="remaining time"
+                        title="Deliver within the deadline"
+                        description="Check the remaining time and work on getting things done.">
+                    </InfoCard>
                 </div>
             </section>
 
