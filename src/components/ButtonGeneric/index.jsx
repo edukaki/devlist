@@ -6,5 +6,4 @@ const ButtonGeneric = (props) => {
             type="button">{props.buttonName}</button>
     )
 }
-
 export default ButtonGeneric
