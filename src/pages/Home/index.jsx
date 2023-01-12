@@ -18,8 +18,8 @@ const Home = () => {
 
                 {/* Hero Images (Art Direction) */}
                 <picture className="md:relative">
-                    <source media="(max-width: 767px)" srcset={heroImgMobile}/>
-                    <source media="(min-width: 768px)" srcset={heroImgDesktop}/>
+                    <source media="(max-width: 767px)" srcSet={heroImgMobile}/>
+                    <source media="(min-width: 768px)" srcSet={heroImgDesktop}/>
                     <img className='w-full' src={heroImgMobile} alt="Decorative hero"/>
                 </picture>
 
@@ -85,7 +85,8 @@ const Home = () => {
                 <InputGeneric placeSelf="place-self-center" margin="m-auto" width="w-6/12" type="input" placeholder="email"></InputGeneric>
 
                 {/* Call to Action Register Button */}
-                <ButtonGeneric bgColor="blue" placeSelf="place-self-start" buttonName="Register" width="w-3/12"></ButtonGeneric>
+                <ButtonGeneric bgColor="blue" placeSelf="place-self-start" buttonName="Register" width="w-3/12">
+                </ButtonGeneric>
             </section>
         </main>
     )
