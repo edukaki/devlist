@@ -16,11 +16,11 @@ export const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/projects",
-                element: <Navigate replace to="/projects/:userid" />,
+                path: "/dashboard",
+                element: <Navigate replace to="/dashboard/:userid" />,
             },
             {
-                path: "/projects/:userid",
+                path: "/dashboard/:userid",
                 element: (
                     <Protected>
                         <ProjectContextProvider>
