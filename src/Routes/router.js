@@ -3,6 +3,7 @@ import Protected from "../common/utils/Protected";
 import Home from "../pages/Home";
 import Layout from "../Layout/Layout";
 import Projects from "../pages/Projects";
+import About from "../pages/About";
 import SignIn from "../pages/SignIn";
 import { ProjectContextProvider } from "../context/ProjectsContext";
 
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
                         </ProjectContextProvider>
                     </Protected>
                 ),
+            },
+            {
+                path:"/about",
+                element: <About />
             },
             {
                 path: "/signin",
