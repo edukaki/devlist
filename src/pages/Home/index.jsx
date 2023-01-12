@@ -20,7 +20,7 @@ const Home = () => {
                 <picture className="md:relative">
                     <source media="(max-width: 767px)" srcset={heroImgMobile}/>
                     <source media="(min-width: 768px)" srcset={heroImgDesktop}/>
-                    <img src={heroImgMobile} alt="Decorative hero"/>
+                    <img className='w-full' src={heroImgMobile} alt="Decorative hero"/>
                 </picture>
 
                 {/* Hero Text */}
