@@ -11,7 +11,7 @@ import InputGeneric from '../../components/InputGeneric'
 
 const Home = () => {
     return (
-        <main className='min-h-[100vh] scroll-smooth bg-lightGray'>
+        <main>
 
             {/* Hero Information */}
             <section className='flex flex-col justify-around text-darkGray md:relative'>
