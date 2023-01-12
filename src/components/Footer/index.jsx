@@ -5,7 +5,7 @@ import logo from '../../img/icons/logo.png'
 const Footer = () => {
   return (
     <footer className='bg-[#FFBD59]'>
-      <img className='w-1/6' src={logo} alt="Devnote logo" />
+      <img className='w-44 sm:w-64' src={logo} alt="Devnote logo" />
       <ul className='pl-6 font-bold text-base'>
         <li className='pt-7 pb-3'><Link to='/contact'>Home</Link></li>
         <li className='pb-3'><Link to='/dashboard'>Dashboard</Link></li>
