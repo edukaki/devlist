@@ -11,7 +11,7 @@ import ButtonGeneric from '../../components/ButtonGeneric'
 const Home = () => {
     return (
         <main className='min-h-[100vh] scroll-smooth bg-lightGray'>
-            <section className='flex flex-col-reverse justify-around text-darkGray md:relative'>
+            <section className='flex flex-col justify-around text-darkGray md:relative'>
                 <picture className="md:relative">
                     <source media="(max-width: 767px)" srcset={heroImgMobile}/>
                     <source media="(min-width: 768px)" srcset={heroImgDesktop}/>
