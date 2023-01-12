@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply flex flex-col min-h-screen relative font-roboto;
+        @apply flex flex-col min-h-screen relative font-roboto text-base;
     }
     main {
         @apply h-full pb-[18rem] min-h-screen scroll-smooth bg-lightGray;
