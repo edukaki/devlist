@@ -32,8 +32,7 @@ const Home = () => {
                     <InputGeneric placeSelf="place-self-start" width="w-3/4" type="input" placeholder="email"></InputGeneric>
 
                     {/* Hero Register Button */}
-                    <ButtonGeneric bgColor="bg-blue" hoverColor="bg-sky-400" textColor="text-white" placeSelf="md:place-self-start" ringColor="ring-blue" buttonName="Register" width="w-1/2">
-                    </ButtonGeneric>
+                    <ButtonGeneric bgColor="blue" placeSelf="md:place-self-start" buttonName="Register" width="w-1/2"></ButtonGeneric>
                 </div>
             </section>
 
@@ -86,8 +85,7 @@ const Home = () => {
                 <InputGeneric placeSelf="place-self-center" margin="m-auto" width="w-6/12" type="input" placeholder="email"></InputGeneric>
 
                 {/* Call to Action Register Button */}
-                <ButtonGeneric bgColor="bg-blue" hoverColor="bg-sky-400" textColor="text-white" placeSelf="place-self-start" ringColor="ring-blue" buttonName="Register" width="w-3/12">
-                </ButtonGeneric>
+                <ButtonGeneric bgColor="blue" placeSelf="place-self-start" buttonName="Register" width="w-3/12"></ButtonGeneric>
             </section>
         </main>
     )
