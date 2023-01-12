@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { UserAuth } from '../../context/AuthContext';
+import logo from '../../img/icons/logo.png'
 
 const Navbar = () => {
 
@@ -9,18 +10,19 @@ const Navbar = () => {
 
     return (
 
-        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded font-courier">
             <div className="container flex flex-wrap items-center justify-between mx-auto">
                 <Link to='/' className="flex items-center">
-                    <span className="self-center text-xl font-semibold whitespace-nowrap">DevNote</span>
+                    <img className='w-44' src={logo} alt="Devnote logo" />
+
                 </Link>
                 {!user ?
                     <div className="flex items-center md:order-2">
-                    <Link to='/signin'>
-                        Sign in
-                    </Link>
+                        <Link to='/signin'>
+                            Sign in
+                        </Link>
                     </div>
-                    : 
+                    :
                     <div className="flex items-center md:order-2">
                         <button type="button" className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                             <img className="w-8 h-8 rounded-full" src={user.photoURL} alt="user" />
@@ -44,21 +46,24 @@ const Navbar = () => {
                     </div>
                 }
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
-                    <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+                    <ul className="flex flex-col p-4 mt-4 font-bold text-lg md:flex-row md:space-x-8 md:mt-0">
                         <li>
-                            <Link to='/' className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</Link>
+                            <Link to='/' className="block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</Link>
                         </li>
                         <li>
                             <Link to={
                                 !user ? '/signin' :
-                                `/projects/user?:${user.uid}`} 
-                                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Projects</Link>
+                                    `/dashboard/user?:${user.uid}`}
+                                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Dashboard</Link>
                         </li>
                         <li>
                             <Link to='/about' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</Link>
                         </li>
                         <li>
-                            <Link to='' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</Link>
+                            <Link to='/contact' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</Link>
+                        </li>
+                        <li>
+                            <Link to='/faq' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">FAQ</Link>
                         </li>
                     </ul>
                 </div>
