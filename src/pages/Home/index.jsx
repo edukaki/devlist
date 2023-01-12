@@ -15,7 +15,7 @@ const Home = () => {
                 <picture className="md:relative">
                     <source media="(max-width: 767px)" srcset={heroImgMobile}/>
                     <source media="(min-width: 768px)" srcset={heroImgDesktop}/>
-                    <img src={heroImgMobile} alt="Chris standing up holding his daughter Elva"/>
+                    <img src={heroImgMobile} alt="Decorative hero"/>
                 </picture>
 
                 <div className='flex flex-col tracking-wider font-roboto space-y-6 p-5 ml-12 md:absolute md:top-10 left-10 md:w-6/12 xl:w-5/12 my-auto'>
