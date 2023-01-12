@@ -3,7 +3,7 @@ import React from 'react'
 const InfoCard = (props) => {
     return (
 
-        <div className="flex flex-col pb-14">
+        <div className="flex flex-col pb-14 bg-grayish rounded-xl drop-shadow-md hover:scale-125 transition duration-300 easy-in-out">
             <img className="w-36 place-self-center" src={props.src} alt={props.alt} />
             <h3 className="w-48 place-self-center text-center pb-4 font-courier font-semibold tracking-wider">{props.title}</h3>
             <p className="w-48 line-clamp-3 place-self-center text-center tracking-wider lg:w-40">{props.description}</p>
