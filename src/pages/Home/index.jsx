@@ -11,8 +11,14 @@ import ButtonGeneric from '../../components/ButtonGeneric'
 const Home = () => {
     return (
         <main className='min-h-[100vh] scroll-smooth bg-lightGray'>
-            <section className='flex flex-col-reverse justify-around pt-6 md:flex-row text-darkGray'>
-                <div className='flex flex-col tracking-wider font-roboto space-y-6 md:w-6/12 xl:w-5/12 my-auto p-5'>
+            <section className='flex flex-col-reverse justify-around text-darkGray md:relative'>
+                <picture className="md:relative">
+                    <source media="(max-width: 767px)" srcset={heroImgMobile}/>
+                    <source media="(min-width: 768px)" srcset={heroImgDesktop}/>
+                    <img src={heroImgMobile} alt="Chris standing up holding his daughter Elva"/>
+                </picture>
+
+                <div className='flex flex-col tracking-wider font-roboto space-y-6 p-5 ml-12 md:absolute md:top-10 left-10 md:w-6/12 xl:w-5/12 my-auto'>
                     <h1 className="font-courier font-bold text-4xl text-center pt-3 lg:text-5xl md:text-left lg:text-6xl">DevNote</h1>
                     <p className="text-xl text-center m-auto pt-6 sm:w-2/3 md:text-left md:m-0 lg:text-4xl">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
                     <input className="drop-shadow rounded w-2/5 place-self-center py-1 px-2 md:place-self-start lg:w-3/4" type="email" placeholder="email"></input>
@@ -20,12 +26,6 @@ const Home = () => {
                     <ButtonGeneric bgColor="bg-blue" hoverColor="bg-sky-400" textColor="text-white" placeSelf="md:place-self-start" ringColor="ring-blue" buttonName="Register" width="w-1/2">
                     </ButtonGeneric>
                 </div>
-                
-                <picture>
-                    <source media="(max-width: 799px)" srcset={heroImgMobile}/>
-                    <source media="(min-width: 800px)" srcset={heroImgDesktop}/>
-                    <img src={heroImgMobile} alt="Chris standing up holding his daughter Elva"/>
-                </picture>
             </section>
 
             <section>
