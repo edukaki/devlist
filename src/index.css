@@ -7,7 +7,7 @@
         @apply flex flex-col min-h-screen relative font-roboto;
     }
     main {
-        @apply min-h-full pb-[18rem];
+        @apply min-h-full pb-[18rem] scroll-smooth bg-lightGray;
     }
     footer {
         @apply w-full absolute bottom-0 font-courier text-2xl;
