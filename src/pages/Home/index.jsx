@@ -1,8 +1,9 @@
 import React from 'react'
-import heroImageHome from '../../img/home/hero-img.png'
+import heroImgDesktop from '../../img/home/hero-img-desktop.png'
+import heroImgMobile from '../../img/home/hero-img-mobile.png'
 import ongoingIcon from '../../img/icons/ongoing-icon.png'
 import doneIcon from '../../img/icons/done-icon.png'
-import totalTimeIcon from '../../img/icons/total-time-icon.png'
+import totalTimeIcon from '../../img/icons/clock-icon.png'
 import remainingTimeIcon from '../../img/icons/remaining-icon.png'
 import InfoCard from '../../components/InfoCard'
 import ButtonGeneric from '../../components/ButtonGeneric'
@@ -19,10 +20,12 @@ const Home = () => {
                     <ButtonGeneric bgColor="bg-blue" hoverColor="bg-sky-400" textColor="text-white" placeSelf="md:place-self-start" ringColor="ring-blue" buttonName="Register" width="w-1/2">
                     </ButtonGeneric>
                 </div>
-
-                <div className="md:w-5/12 ">
-                    <img src={heroImageHome} alt="decorative Devnote features" />
-                </div>
+                
+                <picture>
+                    <source media="(max-width: 799px)" srcset={heroImgMobile}/>
+                    <source media="(min-width: 800px)" srcset={heroImgDesktop}/>
+                    <img src={heroImgMobile} alt="Chris standing up holding his daughter Elva"/>
+                </picture>
             </section>
 
             <section>
