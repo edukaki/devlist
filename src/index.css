@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply flex flex-col min-h-screen relative font-roboto;
+    }
+    main {
+        @apply min-h-full pb-[18rem];
+    }
+    footer {
+        @apply w-full absolute bottom-0 font-courier text-2xl;
+    }
+}
