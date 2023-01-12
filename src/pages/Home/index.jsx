@@ -12,30 +12,41 @@ import InputGeneric from '../../components/InputGeneric'
 const Home = () => {
     return (
         <main className='min-h-[100vh] scroll-smooth bg-lightGray'>
+
+            {/* Hero Information */}
             <section className='flex flex-col justify-around text-darkGray md:relative'>
+
+                {/* Hero Images (Art Direction) */}
                 <picture className="md:relative">
                     <source media="(max-width: 767px)" srcset={heroImgMobile}/>
                     <source media="(min-width: 768px)" srcset={heroImgDesktop}/>
                     <img src={heroImgMobile} alt="Decorative hero"/>
                 </picture>
 
+                {/* Hero Text */}
                 <div className='flex flex-col tracking-wider font-roboto space-y-6 p-5 ml-12 md:absolute md:top-10 left-10 md:w-6/12 xl:w-5/12 my-auto'>
                     <h1 className="font-courier font-bold text-4xl text-center pt-3 lg:text-5xl md:text-left lg:text-6xl">DevNote</h1>
                     <p className="text-xl text-center m-auto pt-6 sm:w-2/3 md:text-left md:m-0 lg:text-4xl">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
 
+                    {/* Hero Email Input */}
                     <InputGeneric placeSelf="place-self-start" width="w-3/4" type="input" placeholder="email"></InputGeneric>
 
+                    {/* Hero Register Button */}
                     <ButtonGeneric bgColor="bg-blue" hoverColor="bg-sky-400" textColor="text-white" placeSelf="md:place-self-start" ringColor="ring-blue" buttonName="Register" width="w-1/2">
                     </ButtonGeneric>
                 </div>
             </section>
 
+            {/* Benefits Section */}
             <section>
+
+                {/* Benefits Title */}
                 <div className="my-20 leading-9 font-roboto text-darkGray font-medium text-xl tracking-wider lg:text-2xl">
                     <h2 className="text-center">Track your <span className="font-courier font-semibold text-orange">projects</span>. Manage your <span className="font-courier font-semibold text-orange">time</span>. Get things <span className="font-courier font-semibold text-orange">done!</span></h2>
                     <p className="text-center mt-4 m-auto md:w-5/12">DevNote helps you keep things simple, efficient and organized.</p>
                 </div>
 
+                {/* Benefits Cards */}
                 <div className="flex flex-col font-roboto text-darkGray lg:flex-row lg:justify-around">
                     <InfoCard
                         src={ongoingIcon}
@@ -67,11 +78,14 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Call to Action */}
             <section className="my-24 flex flex-col w-6/12 space-y-6 items-center m-auto font-roboto md:text-left">
                 <h2 className="mb-8 text-2xl tracking-wider">Try it out! It's <span className="font-courier text-orange font-semibold">free!</span></h2>
-
+                
+                {/* Call to Action Email Input */}
                 <InputGeneric placeSelf="place-self-center" margin="m-auto" width="w-6/12" type="input" placeholder="email"></InputGeneric>
 
+                {/* Call to Action Register Button */}
                 <ButtonGeneric bgColor="bg-blue" hoverColor="bg-sky-400" textColor="text-white" placeSelf="place-self-start" ringColor="ring-blue" buttonName="Register" width="w-3/12">
                 </ButtonGeneric>
             </section>
