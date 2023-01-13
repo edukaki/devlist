@@ -1,10 +1,11 @@
-import ParagraphBlock from "../../components/ParagraphBlock"
+import ParagraphBlock from "../../components/ParagraphBlock";
+import HeadingOne from "../../components/HeadingOne";
 
 const About = () => {
     return (
         <main> 
             <div className="w-6/12 m-auto py-16 px-8 space-y-6 tracking-wider leading-8 lg:w-8/12 lg:ml-10 lg:px-24 xl:mx-96 xl:12/12 ">
-                <h1 className="font-courier text-3xl font-bold text-darkGray relative before:absolute before:h-14 before:w-4 before:bg-orange before:-left-12 before:-top-2 hover:before:bg-gradient-to-b from-orange to-green">About DevNote</h1>
+                <HeadingOne headingOneContent="About DevNote"></HeadingOne>
 
                 <h2 className="font-courier text-xl font-semibold text-darkGray">Time Is to Be Invested, Not Spent</h2>
 
