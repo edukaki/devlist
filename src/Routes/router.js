@@ -5,6 +5,7 @@ import Layout from "../Layout/Layout";
 import Projects from "../pages/Projects";
 import About from "../pages/About";
 import SignIn from "../pages/SignIn";
+import Faq from "../pages/Faq";
 import { ProjectContextProvider } from "../context/ProjectsContext";
 
 export const router = createBrowserRouter([
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
             {
                 path:"/about",
                 element: <About />
+            },
+            {
+                path:"/faq",
+                element: <Faq />
             },
             {
                 path: "/signin",
