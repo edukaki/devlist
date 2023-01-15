@@ -31,7 +31,8 @@ const AddProjectForm = () => {
                 .required('Required'),
         }),
         onSubmit: (values, {resetForm}) => {
-            alert(JSON.stringify(values, null, 2));
+            setProject(values);
+            resetForm();
         },
     });
     return (
