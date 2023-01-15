@@ -1,5 +1,4 @@
 import HeadingOne from '../../components/HeadingOne'
-import HeadingTwo from '../../components/HeadingTwo'
 import ParagraphBlock from '../../components/ParagraphBlock'
 import ButtonQuestion from '../../components/ButtonQuestion'
 import Ruler from '../../components/Ruler'
