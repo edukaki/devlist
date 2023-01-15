@@ -1,8 +1,8 @@
 import React from 'react'
 import ProjectCard from '../../components/ProjectCard'
 import ProjectItem from '../../components/ProjectItem'
-import { UserProject } from '../../context/ProjectsContext'
 import ProjectListItem from '../../components/ProjectListItem'
+import AddProjectForm from '../../components/AddProjectForm'
 
 const Projects = () => {
 
@@ -15,6 +15,7 @@ const Projects = () => {
                 <ProjectCard title='Remaining time' content='sample' footer='Until all projects deadlines' fromColor='from-red-500' toColor='to-amber-200' />
             </div>
 
+            <AddProjectForm />
             <ProjectItem project='Project' author='Author' status='Status' indicator='Indicator' />
             <ProjectListItem />
         </main>
