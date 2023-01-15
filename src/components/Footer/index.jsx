@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className='bg-[#FFBD59] p-4'>
 
-      <ul className='grid grid-flow-row font-bold text-lg md:grid-cols-4 2xl:grid-cols-6'>
+      <ul className='grid grid-flow-row font-bold text-lg md:grid-cols-4 md:border-b 2xl:grid-cols-6'>
         <li className='flex flex-row justify-between p-4 border-b md:border-none md:flex-col 2xl:col-start-2'>
           <Link to='/'>
             <img className='w-36' src={logo} alt="Devnote logo" />
