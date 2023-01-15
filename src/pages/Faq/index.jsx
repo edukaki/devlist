@@ -1,7 +1,8 @@
-import HeadingOne from "../../components/HeadingOne"
-import ParagraphBlock from "../../components/ParagraphBlock"
-import ButtonQuestion from "../../components/ButtonQuestion"
-import Ruler from "../../components/Ruler"
+import HeadingOne from '../../components/HeadingOne'
+import ParagraphBlock from '../../components/ParagraphBlock'
+import ButtonQuestion from '../../components/ButtonQuestion'
+import Ruler from '../../components/Ruler'
+import faqImg from '../../img/faq/faq.png'
 
 const Faq = () => {
     return (
@@ -28,7 +29,7 @@ const Faq = () => {
                 <ParagraphBlock bgColor="exist" hidden="true" paragraphContent="No. DevNote is completely FREE!"/>
 
             </div>
-           
+
         </main>
     )
 }
