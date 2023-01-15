@@ -29,9 +29,9 @@ const Faq = () => {
                 <ParagraphBlock bgColor="exist" hidden="true" paragraphContent="No. DevNote is completely FREE!"/>
 
             </div>
-            <section className='flex flex-column md:flex-row '>
-                <h2 className="text-xl tracking-wider font-thin">Still wondering if <span className="font-courier text-orange">DevNote is the right</span> tool for you?</h2>
-                <img src={faqImg}></img>
+            <section className='flex justify-around p-8'>
+                <h2 className="text-xl w-5/12 my-auto tracking-wider lg:text-2xl">Still wondering if <span className="font-courier text-orange">DevNote is the right</span> tool for you?</h2>
+                <img className="w-4/12 lg:w-3/12" src={faqImg} alt="decorative question mark"></img>
             </section>
         </main>
     )
