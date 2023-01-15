@@ -4,12 +4,14 @@
 
 @layer base {
     body {
-        @apply flex flex-col min-h-screen relative font-roboto text-base;
+        @apply flex flex-col font-roboto text-base;
     }
+
     main {
-        @apply h-full pb-[18rem] min-h-screen scroll-smooth bg-lightGray;
+        @apply min-h-[calc(100vh-18rem)] scroll-smooth bg-lightGray;
     }
+
     footer {
-        @apply w-full absolute bottom-0 font-courier text-2xl;
+        @apply w-full font-courier text-2xl;
     }
 }
