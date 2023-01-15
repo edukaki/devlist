@@ -29,7 +29,10 @@ const Faq = () => {
                 <ParagraphBlock bgColor="exist" hidden="true" paragraphContent="No. DevNote is completely FREE!"/>
 
             </div>
-
+            <section className='flex flex-column md:flex-row '>
+                <h2 className="text-xl tracking-wider font-thin">Still wondering if <span className="font-courier text-orange">DevNote is the right</span> tool for you?</h2>
+                <img src={faqImg}></img>
+            </section>
         </main>
     )
 }
