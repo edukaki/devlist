@@ -15,3 +15,30 @@
         @apply w-full font-courier text-2xl;
     }
 }
+
+@layer components {
+    .form-label{
+        @apply font-courier font-bold text-xl
+    }
+
+    .input-generic{
+        @apply w-full px-3 py-2 rounded-md border-2 text-slate-500 focus:outline-none focus:border-orange;
+    }
+
+    .label-input{
+        @apply flex flex-col w-full
+    }
+
+    .project-form{
+        @apply flex flex-col m-auto p-6 lg:w-6/12
+    }
+
+    .project-form input, select{
+        @apply input-generic
+    }
+
+    .errors{
+        @apply text-orange
+    }
+
+}
