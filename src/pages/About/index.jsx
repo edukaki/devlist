@@ -6,11 +6,11 @@ const About = () => {
     return (
         <main> 
             <div className="w-6/12 m-auto py-16 px-8 space-y-6 tracking-wider leading-8 lg:w-8/12 lg:ml-10 lg:px-24 xl:mx-96 xl:12/12">
+                
                 <div className="pl-4 bg-orange hover:bg-gradient-to-b from-orange to-green">
                     <HeadingOne headingOneContent="About DevNote"></HeadingOne>
                 </div>
                
-
                 <HeadingTwo headingTwoContent="Time Is to Be Invested, Not Spent"></HeadingTwo>
 
                 <ParagraphBlock paragraphContent="DevNote is the only developer tool created to help you keep track of your projects, check what you have done and manage your time."></ParagraphBlock>

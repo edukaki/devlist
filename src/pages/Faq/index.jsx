@@ -3,14 +3,17 @@ import ParagraphBlock from '../../components/ParagraphBlock'
 import ButtonQuestion from '../../components/ButtonQuestion'
 import Ruler from '../../components/Ruler'
 import faqImg from '../../img/faq/faq.png'
+import HeadingTwo from '../../components/HeadingTwo'
 
 const Faq = () => {
     return (
         <main>
             
             <div className="w-6/12 m-auto py-16 px-8 space-y-6 tracking-wider leading-8 lg:w-9/12 lg:ml-10 lg:px-24 xl:mx-96 xl:12/12 ">
-                
+            
+            <div className="pl-4 bg-orange hover:bg-gradient-to-b from-orange to-green">
                 <HeadingOne headingOneContent="Frequently Asked Questions"/>
+            </div>
 
                 <ButtonQuestion hidden='true' text="How do I add my projects to DevNote?"/>
 
@@ -33,7 +36,7 @@ const Faq = () => {
             <section className='flex justify-around p-8'>
                 <h2 className="text-xl w-5/12 my-auto tracking-wider lg:text-2xl">Still wondering if <span className="font-courier text-orange">DevNote is the right</span> tool for you?</h2>
                 <img className="w-4/12 lg:w-3/12" src={faqImg} alt="decorative question mark"></img>
-            </section>     
+            </section>    
 
         </main>
     )
