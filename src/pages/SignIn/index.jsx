@@ -37,7 +37,7 @@ const SignIn = () => {
             </div>
 
             <div className="max-w-[240px] m-auto space-y-4 py-4">
-                <p>Or</p>
+                <p className="text-center py-4">Or</p>
                 <GoogleButton onClick={handleGoogleSignIn} />
             </div>
         </main>
