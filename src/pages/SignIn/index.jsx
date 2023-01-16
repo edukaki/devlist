@@ -33,7 +33,7 @@ const SignIn = () => {
             <div className="flex flex-col max-w-[240px] m-auto space-y-4">
                <InputGeneric type="email" placeholder="Enter email"/>
                <InputGeneric type="password" placeholder="Enter password"/>
-               <ButtonGeneric bgColor="bg-green" buttonName="Login"/>
+               <ButtonGeneric bgColor="bg-green" width="w-full" textColor="text-white" buttonName="Login"/>
             </div>
 
             <div className="max-w-[240px] m-auto space-y-4 py-4">
