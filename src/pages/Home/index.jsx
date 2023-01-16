@@ -24,11 +24,11 @@ const Home = () => {
                 </picture>
 
                 {/* Hero Text */}
-                <div className="flex flex-col tracking-wider m-auto font-roboto space-y-6 py-5  md:absolute md:top-10 md:left-10 lg:top-30 lg:left-20 xl:top-50 xl:left-30 2xl:top-50 2xl:left-40 2xl:pl-50 2xl:pt-25 min-[1800px]:top-52 min-[1800px]:left-52 min-[3000px]:top-60 min-[3000px]:left-72">
+                <div className="flex flex-col tracking-wider m-auto font-roboto space-y-6 p-5 md:absolute md:top-10 md:left-10 lg:top-30 lg:left-20 xl:top-50 xl:left-30 2xl:top-50 2xl:left-40 2xl:pl-50 2xl:pt-25 min-[1800px]:top-52 min-[1800px]:left-52 min-[3000px]:top-60 min-[3000px]:left-72">
                     
-                    <div className="max-w-[400px] xl:max-w-[600px] min-[3000px]:max-w-[800px]">
-                        <h1 className="font-courier font-bold text-4xl text-center pt-3 md:text-left lg:text-5xl xl:text-8xl">DevNote</h1>
-                        <p className="text-xl text-center m-auto pt-6 sm:w-2/3 md:text-left md:m-0 lg:text-3xl xl:text-4xl">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
+                    <div className="max-w-[400px] xl:max-w-[600px] min-[2500px]:max-w-[1400px]">
+                        <h1 className="font-courier font-bold text-4xl text-center pt-3 md:text-left lg:text-5xl xl:text-6xl min-[2500px]:text-8xl">DevNote</h1>
+                        <p className="text-xl text-center m-auto pt-6 sm:w-2/3 md:text-left md:m-0 lg:text-3xl xl:text-4xl min-[2500px]:text-6xl">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
                     </div>
 
                     <div class="max-w-[240px] space-y-6 mx-auto md:ml-0">
