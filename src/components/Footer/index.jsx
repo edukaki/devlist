@@ -1,8 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { UserAuth } from '../../context/AuthContext'
 import logo from '../../img/icons/logo.png'
+import { Navigate } from 'react-router-dom'
 
 const Footer = () => {
+
+  const { user, logOut } = UserAuth()
+
+  const handleSignOut = async () => {
+      try{
+          await logOut()
+      } catch(error){
+          console.log(error)
+      }
+  }
+
   return (
     <footer className='bg-[#FFBD59] p-4'>
 
@@ -11,7 +24,9 @@ const Footer = () => {
           <Link to='/'>
             <img className='w-36' src={logo} alt="Devnote logo" />
           </Link>
-          <Link><div>Log In</div></Link>
+          <div onClick={() =>
+            user? handleSignOut() : <Navigate to='/signin' />
+          }>{user? 'Sign out' : 'Log in'}</div>
         </li>
         <li className='flex flex-col h-full p-4 border-b md:border-none md:hover:bg-slate-200/30'>
           <Link to='/about'>
