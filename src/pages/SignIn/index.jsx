@@ -29,14 +29,14 @@ const SignIn = () => {
     return (
         <main>
             <div className="text-center text-3xl font-bold py-8">SignIn</div>
-            
-            <div>
+
+            <div className="flex flex-col max-w-[240px] m-auto space-y-4">
                <InputGeneric type="email" placeholder="Enter email"/>
-               <InputGeneric type="password" placeholder="Enter email"/>
+               <InputGeneric type="password" placeholder="Enter password"/>
                <ButtonGeneric bgColor="bg-green" buttonName="Login"/>
             </div>
 
-            <div className="max-w-[240px] m-auto py-4">
+            <div className="max-w-[240px] m-auto space-y-4 py-4">
                 <p>Or</p>
                 <GoogleButton onClick={handleGoogleSignIn} />
             </div>
