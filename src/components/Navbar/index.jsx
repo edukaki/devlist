@@ -5,10 +5,18 @@ import logo from '../../img/icons/logo.png'
 
 const Navbar = () => {
 
-    const { user } = UserAuth()
+    const { user, logOut } = UserAuth()
     const [ avatarMenu, setAvatarMenu ] = useState(false)
     const [ hamburgerMenu, setHamburgerMenu ] = useState(false)
     console.log(user)
+
+    const handleSignOut = async () => {
+        try{
+            await logOut()
+        } catch(error){
+            console.log(error)
+        }
+    }
 
     return (
 
@@ -19,7 +27,7 @@ const Navbar = () => {
 
                 </Link>
                 {!user ?
-                    <div className="flex items-center md:order-2">
+                    <div className="flex items-center md:order-2 text-lg text-gray-700 font-bold">
                         <Link to='/signin'>
                             Log In
                         </Link>
@@ -45,7 +53,8 @@ const Navbar = () => {
                                     <Link to='/settings' className="block px-4 py-2 hover:bg-gray-100">Settings</Link>
                                 </li>
                                 <li>
-                                    <Link to='' className="block px-4 py-2 hover:bg-gray-100">Sign out</Link>
+                                    <div className="block px-4 py-2 hover:bg-gray-100"
+                                    onClick={() => handleSignOut()}>Sign out</div>
                                 </li>
                             </ul>
                         </div>
