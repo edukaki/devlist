@@ -8,7 +8,7 @@ const Faq = () => {
     return (
         <main>
             
-            <div className="w-6/12 mx-auto py-16 px-2 space-y-6 tracking-wider leading-8 lg:w-9/12 lg:ml-10 lg:px-24 xl:12/12 ">
+            <div className="w-10/12 mx-auto py-16 px-2 space-y-6 tracking-wider leading-8 lg:w-9/12 lg:ml-10 lg:px-24 xl:12/12 ">
             
             <div className="pl-4 bg-orange hover:bg-gradient-to-b from-orange to-green">
                 <HeadingOne headingOneContent="Frequently Asked Questions"/>

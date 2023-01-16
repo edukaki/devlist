@@ -25,6 +25,7 @@ const About = () => {
 
                 <ParagraphBlock width="lg:w-6/12" paragraphContent="Next year, in 2023, Eduardo invited Caroline Almeida Nikolic, a developer colleague, to participate in the project. They came up with the design and interactions and made Devnote available to the world."></ParagraphBlock>
             </div>
+
         </main>
         )
     }
