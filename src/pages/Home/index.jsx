@@ -24,15 +24,17 @@ const Home = () => {
                 </picture>
 
                 {/* Hero Text */}
-                <div className='flex flex-col tracking-wider font-roboto space-y-6 p-5 ml-12 md:absolute md:top-10 left-10 md:w-6/12 xl:w-5/12 my-auto'>
+                <div className='flex flex-col tracking-wider my-auto font-roboto space-y-6 p-5 ml-12 md:absolute md:top-10 left-10 md:w-6/12 xl:w-5/12'>
                     <h1 className="font-courier font-bold text-4xl text-center pt-3 lg:text-5xl md:text-left lg:text-6xl">DevNote</h1>
                     <p className="text-xl text-center m-auto pt-6 sm:w-2/3 md:text-left md:m-0 lg:text-4xl">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
 
-                    {/* Hero Email Input */}
-                    <InputGeneric placeSelf="place-self-start" width="w-3/4" type="input" placeholder="email"></InputGeneric>
+                    <div class="max-w-[240px] space-y-6 mx-auto md:ml-0">
+                        {/* Hero Email Input */}
+                        <InputGeneric width="w-full" type="input" placeholder="email"></InputGeneric>
 
-                    {/* Hero Register Button */}
-                    <ButtonGeneric bgColor="blue" placeSelf="md:place-self-start" buttonName="Register" width="w-1/2"></ButtonGeneric>
+                        {/* Hero Register Button */}
+                        <ButtonGeneric bgColor="blue" buttonName="Register" width="w-full"></ButtonGeneric>
+                    </div>
                 </div>
             </section>
 
@@ -81,12 +83,14 @@ const Home = () => {
             <section className="my-24 flex flex-col w-6/12 space-y-6 items-center m-auto font-roboto md:text-left">
                 <h2 className="mb-8 text-2xl tracking-wider">Try it out! It's <span className="font-courier text-orange font-semibold">free!</span></h2>
                 
-                {/* Call to Action Email Input */}
-                <InputGeneric placeSelf="place-self-center" margin="m-auto" width="w-6/12" type="input" placeholder="email"></InputGeneric>
+                <div class="max-w-[240px] space-y-6">
+                    {/* Call to Action Email Input */}
+                    <InputGeneric margin="m-auto" width="w-full" type="input" placeholder="email"></InputGeneric>
 
-                {/* Call to Action Register Button */}
-                <ButtonGeneric bgColor="blue" placeSelf="place-self-start" buttonName="Register" width="w-3/12">
-                </ButtonGeneric>
+                    {/* Call to Action Register Button */}
+                    <ButtonGeneric bgColor="blue" buttonName="Register" width="w-full">
+                    </ButtonGeneric>
+                </div>
             </section>
         </main>
     )
