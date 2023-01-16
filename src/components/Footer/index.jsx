@@ -31,7 +31,7 @@ const Footer = () => {
         <li className='flex flex-col h-full p-4 border-b md:border-none md:hover:bg-slate-200/30'>
           <Link to='/about'>
             <div className='pb-2'>About</div>
-            <div className='font-normal text-sm'>Get to know the masterminds and history behind DevNote</div>
+            <div className='font-normal text-sm'>Get to know the masterminds and the history behind DevNote</div>
           </Link>
         </li>
         <li className='flex flex-col h-full p-4 border-b md:border-none md:hover:bg-slate-200/30'>
