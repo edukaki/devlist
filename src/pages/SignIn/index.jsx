@@ -29,7 +29,7 @@ const SignIn = () => {
     return (
         <main>
             <div className="text-center text-3xl font-bold py-8">SignIn</div>
-
+            
             <div className="flex flex-col max-w-[240px] m-auto space-y-4">
                <InputGeneric type="email" placeholder="Enter email"/>
                <InputGeneric type="password" placeholder="Enter password"/>
