@@ -27,7 +27,7 @@ const Navbar = () => {
 
                 </Link>
                 {!user ?
-                    <div className="flex items-center md:order-2 text-lg text-gray-700 font-bold">
+                    <div className="flex items-center md:order-2 text-lg text-gray-700 font-bold hover:text-Orange">
                         <Link to='/signin'>
                             Log In
                         </Link>
@@ -70,22 +70,22 @@ const Navbar = () => {
                 <div className={`${hamburgerMenu ? '' : 'hidden'} items-center justify-between w-full md:flex md:w-auto md:order-1`}>
                     <ul className="flex flex-col p-4 mt-4 font-bold text-lg md:flex-row md:space-x-8 md:mt-0">
                         <li>
-                            <Link to='/' className="block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</Link>
+                            <Link to='/' className="block py-2 pl-3 pr-4 hover:text-lightOrange text-gray-700 md:p-0" aria-current="page">Home</Link>
                         </li>
                         <li>
                             <Link to={
                                 !user ? '/signin' :
                                     `/dashboard/user?:${user.uid}`}
-                                className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Dashboard</Link>
+                                className="block py-2 pl-3 pr-4 hover:text-lightOrange text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Dashboard</Link>
                         </li>
                         <li>
-                            <Link to='/about' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</Link>
+                            <Link to='/about' className="block py-2 pl-3 pr-4 hover:text-lightOrange text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">About</Link>
                         </li>
                         <li>
-                            <Link to='/contact' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</Link>
+                            <Link to='/contact' className="block py-2 pl-3 pr-4 hover:text-lightOrange text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</Link>
                         </li>
                         <li>
-                            <Link to='/faq' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">FAQ</Link>
+                            <Link to='/faq' className="block py-2 pl-3 pr-4 hover:text-lightOrange text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">FAQ</Link>
                         </li>
                     </ul>
                 </div>
