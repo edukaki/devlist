@@ -9,28 +9,28 @@ const SignIn = () => {
     const navigate = useNavigate()
 
     const handleGoogleSignIn = async () => {
-        try{
+        try {
             await googleSignIn()
             navigate('/')
         }
-        catch(error){
+        catch (error) {
             console.log(error)
         }
     }
 
     useEffect(() => {
-    if(user !== null){
-        navigate('/')
-    }
-},[navigate, user])
+        if (user !== null) {
+            navigate('/')
+        }
+    }, [navigate, user])
 
     return (
-        <>
-        <div className="text-center text-3xl font-bold py-8">SignIn</div>
-        <div className="max-w-[240px] m-auto py-4">
-            <GoogleButton onClick={handleGoogleSignIn} />
-        </div>
-        </>
+        <main>
+            <div className="text-center text-3xl font-bold py-8">SignIn</div>
+            <div className="max-w-[240px] m-auto py-4">
+                <GoogleButton onClick={handleGoogleSignIn} />
+            </div>
+        </main>
     )
 }
 
