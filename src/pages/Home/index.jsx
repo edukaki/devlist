@@ -81,7 +81,7 @@ const Home = () => {
 
             {/* Call to Action */}
             <section className="my-24 flex flex-col w-6/12 space-y-6 items-center m-auto font-roboto md:text-left">
-                <h2 className="mb-8 text-2xl tracking-wider">Try it out! It's <span className="font-courier text-orange font-semibold">free!</span></h2>
+                <h2 className="mb-8 text-2xl tracking-wider text-center">Try it out! It's <span className="font-courier text-orange font-semibold uppercase">free!</span></h2>
                 
                 <div class="max-w-[240px] space-y-6">
                     {/* Call to Action Email Input */}
