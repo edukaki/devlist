@@ -4,12 +4,41 @@
 
 @layer base {
     body {
-        @apply flex flex-col min-h-screen relative font-roboto text-base;
+        @apply flex flex-col font-roboto text-base;
     }
+
     main {
-        @apply h-full pb-[18rem] min-h-screen scroll-smooth bg-lightGray;
+        @apply min-h-[calc(100vh-27rem)] pt-16 pb-5 scroll-smooth bg-lightGray md:min-h-[calc(100vh-13rem)];
     }
+
     footer {
-        @apply w-full absolute bottom-0 font-courier text-2xl;
+        @apply w-full font-courier text-2xl;
     }
+}
+
+@layer components {
+    .form-label{
+        @apply font-courier font-bold text-xl
+    }
+
+    .input-generic{
+        @apply w-full px-3 py-2 rounded-md border-2 text-slate-500 focus:outline-none focus:border-orange;
+    }
+
+    .label-input{
+        @apply flex flex-col w-full
+    }
+
+    .project-form{
+        @apply flex flex-col m-auto p-6 lg:w-6/12
+    }
+
+    .project-form input, select{
+        @apply input-generic
+    }
+
+    .errors{
+        @apply text-orange
+    }
+
 }
