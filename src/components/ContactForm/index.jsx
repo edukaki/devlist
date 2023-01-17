@@ -27,7 +27,7 @@ const ContactForm = () => {
     });
 
     return (
-        <form onSubmit={contact.handleSubmit} className="flex flex-col p-6 font-courier text-darkGray space-y-3 m-auto max-w-[500px]">
+        <form onSubmit={contact.handleSubmit} className="flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[500px]">
             <label htmlFor="firstName" className="font-semibold">First Name</label>
             <input
                 id="firstName"
