@@ -27,8 +27,8 @@ const ContactForm = () => {
     });
 
     return (
-        <form onSubmit={contact.handleSubmit}>
-            <label htmlFor="firstName">First Name</label>
+        <form onSubmit={contact.handleSubmit} className="flex flex-col p-6 font-courier space-y-3 m-auto max-w-[500px]">
+            <label htmlFor="firstName" className="font-semibold">First Name</label>
             <input
                 id="firstName"
                 name="firstName"
@@ -41,7 +41,7 @@ const ContactForm = () => {
                 <div>{contact.errors.firstName}</div>
             ) : null}
 
-            <label htmlFor="lastName">Last Name</label>
+            <label htmlFor="lastName" className="font-semibold">Last Name</label>
             <input
                 id="lastName"
                 name="lastName"
@@ -54,7 +54,7 @@ const ContactForm = () => {
                 <div>{contact.errors.lastName}</div>
             ) : null}
 
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="email" className="font-semibold">Email Address</label>
             <input
                 id="email"
                 name="email"
@@ -67,7 +67,7 @@ const ContactForm = () => {
                 <div>{contact.errors.email}</div>
             ) : null}
 
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message" className="font-semibold">Message</label>
             <textarea
                 id="message"
                 name="message"
