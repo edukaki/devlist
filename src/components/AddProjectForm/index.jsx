@@ -36,7 +36,7 @@ const AddProjectForm = () => {
         },
     });
     return (
-        <form onSubmit={formik.handleSubmit} className="project-form">
+        <form onSubmit={formik.handleSubmit} className="project-form space-y-4">
 
             <div className='flex gap-10'>
                 <div className='label-input'>
