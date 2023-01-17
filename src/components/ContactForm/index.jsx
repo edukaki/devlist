@@ -84,7 +84,7 @@ const ContactForm = () => {
                 <div>{contact.errors.message}</div>
             ) : null}
 
-            <button type="submit">Submit</button>
+                <button type="submit" className="bg-orange text-white text-lg p-2 rounded-md w-8/12 m-auto">Send</button>
         </form>
     );
 };
