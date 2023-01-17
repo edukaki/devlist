@@ -9,7 +9,7 @@ const Contact = () => {
     return (
         <main>
 
-            <div className="max-w-[550px] p-10 space-y-8">
+            <div className="max-w-[550px] p-4 md:py-16 md:pl-20 space-y-8">
                 <div className="pl-4 mb-8 bg-orange hover:bg-gradient-to-b from-orange to-green">
                     <HeadingOne headingOneContent="Need anything? Get in touch. We can help!"/>
                 </div>
