@@ -7,6 +7,7 @@ import About from "../pages/About";
 import SignIn from "../pages/SignIn";
 import Faq from "../pages/Faq";
 import { ProjectContextProvider } from "../context/ProjectsContext";
+import Contact from "../pages/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
             {
                 path:"/about",
                 element: <About />
+            },
+            {
+                path:"/contact",
+                element: <Contact />
             },
             {
                 path:"/faq",
