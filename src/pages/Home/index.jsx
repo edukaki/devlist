@@ -31,7 +31,7 @@ const Home = () => {
                         <p className="text-xl text-center m-auto pt-6 sm:w-2/3 md:text-left md:m-0 lg:text-3xl xl:text-4xl min-[2500px]:text-6xl">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
                     </div>
 
-                    <div class="max-w-[240px] space-y-6 mx-auto md:ml-0">
+                    <div className="max-w-[240px] space-y-6 mx-auto md:ml-0">
                         {/* Hero Email Input */}
                         <InputGeneric width="w-full" type="input" placeholder="email"></InputGeneric>
 
@@ -86,7 +86,7 @@ const Home = () => {
             <section className="my-24 flex flex-col w-6/12 space-y-6 items-center m-auto font-roboto md:text-left">
                 <h2 className="mb-8 text-2xl tracking-wider text-center">Try it out! It's <span className="font-courier text-orange font-semibold uppercase">free!</span></h2>
                 
-                <div class="max-w-[240px] space-y-6">
+                <div className="max-w-[240px] space-y-6">
                     {/* Call to Action Email Input */}
                     <InputGeneric margin="m-auto" width="w-full" type="input" placeholder="email"></InputGeneric>
 
