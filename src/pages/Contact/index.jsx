@@ -17,7 +17,7 @@ const Contact = () => {
                 <div className="space-y-6 text-center md:text-left">
                     <HeadingTwo headingTwoContent="Have any questions?"/>
                     <ParagraphBlock paragraphContent="There is a chance somebody have already asked us."/>
-                    <ButtonGeneric buttonName="Go to FAQ"/>
+                    <ButtonGeneric bgColor="bg-orange text-white font-semibold" buttonName="Go to FAQ"/>
                 </div>
 
                 <div>
