@@ -6,8 +6,8 @@ const ButtonQuestion = (props) => {
         <button className="text-left">
             <HeadingTwo headingTwoContent={props.text}></HeadingTwo>
             {props.hidden === 'true' ?
-                <i class="fa-solid fa-caret-down"></i> :
-                <i class="fa-solid fa-caret-up"></i>
+                <i className="fa-solid fa-caret-down"></i> :
+                <i className="fa-solid fa-caret-up"></i>
             }
         </button>
     )
