@@ -36,7 +36,7 @@ const ContactForm = () => {
                 onChange={contact.handleChange}
                 onBlur={contact.handleBlur}
                 value={contact.values.firstName}
-                className="rounded-md py-1 px-3"
+                className="rounded-md py-2 px-3"
             />
             {contact.touched.firstName && contact.errors.firstName ? (
                 <div>{contact.errors.firstName}</div>
@@ -50,7 +50,7 @@ const ContactForm = () => {
                 onChange={contact.handleChange}
                 onBlur={contact.handleBlur}
                 value={contact.values.lastName}
-                className="rounded-md py-1 px-3"
+                className="rounded-md py-2 px-3"
             />
             {contact.touched.lastName && contact.errors.lastName ? (
                 <div>{contact.errors.lastName}</div>
@@ -64,7 +64,7 @@ const ContactForm = () => {
                 onChange={contact.handleChange}
                 onBlur={contact.handleBlur}
                 value={contact.values.email}
-                className="rounded-md py-1 px-3"
+                className="rounded-md py-2 px-3"
             />
             {contact.touched.email && contact.errors.email ? (
                 <div>{contact.errors.email}</div>
@@ -78,7 +78,7 @@ const ContactForm = () => {
                 onChange={contact.handleChange}
                 onBlur={contact.handleBlur}
                 value={contact.values.message}
-                className="rounded-md py-1 px-3"
+                className="rounded-md py-2 px-3"
             />
             {contact.touched.message && contact.errors.message ? (
                 <div>{contact.errors.message}</div>
