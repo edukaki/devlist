@@ -27,8 +27,8 @@ const ContactForm = () => {
     });
 
     return (
-        <form onSubmit={contact.handleSubmit}>
-            <label htmlFor="firstName">First Name</label>
+        <form onSubmit={contact.handleSubmit} className="flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[500px]">
+            <label htmlFor="firstName" className="font-semibold">First Name</label>
             <input
                 id="firstName"
                 name="firstName"
@@ -36,12 +36,13 @@ const ContactForm = () => {
                 onChange={contact.handleChange}
                 onBlur={contact.handleBlur}
                 value={contact.values.firstName}
+                className="rounded-md py-2 px-3"
             />
             {contact.touched.firstName && contact.errors.firstName ? (
                 <div>{contact.errors.firstName}</div>
             ) : null}
 
-            <label htmlFor="lastName">Last Name</label>
+            <label htmlFor="lastName" className="font-semibold">Last Name</label>
             <input
                 id="lastName"
                 name="lastName"
@@ -49,12 +50,13 @@ const ContactForm = () => {
                 onChange={contact.handleChange}
                 onBlur={contact.handleBlur}
                 value={contact.values.lastName}
+                className="rounded-md py-2 px-3"
             />
             {contact.touched.lastName && contact.errors.lastName ? (
                 <div>{contact.errors.lastName}</div>
             ) : null}
 
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="email" className="font-semibold">Email Address</label>
             <input
                 id="email"
                 name="email"
@@ -62,12 +64,13 @@ const ContactForm = () => {
                 onChange={contact.handleChange}
                 onBlur={contact.handleBlur}
                 value={contact.values.email}
+                className="rounded-md py-2 px-3"
             />
             {contact.touched.email && contact.errors.email ? (
                 <div>{contact.errors.email}</div>
             ) : null}
 
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message" className="font-semibold">Message</label>
             <textarea
                 id="message"
                 name="message"
@@ -75,12 +78,13 @@ const ContactForm = () => {
                 onChange={contact.handleChange}
                 onBlur={contact.handleBlur}
                 value={contact.values.message}
+                className="rounded-md py-2 px-3"
             />
             {contact.touched.message && contact.errors.message ? (
                 <div>{contact.errors.message}</div>
             ) : null}
 
-            <button type="submit">Submit</button>
+                <button type="submit" className="bg-orange text-white text-lg font-semibold p-2 rounded-md w-8/12 m-auto hover:bg-lightOrange active:bg-[#ff8300] active:scale-110 transform duration-300 easy-in-out">Send</button>
         </form>
     );
 };
