@@ -84,7 +84,7 @@ const ContactForm = () => {
                 <div>{contact.errors.message}</div>
             ) : null}
 
-                <button type="submit" className="bg-orange text-white text-lg font-semibold p-2 rounded-md w-8/12 m-auto hover:bg-lightOrange active:bg-[#ff8300] active:scale-110 transform duration-300 easy-in-out">Send</button>
+                <button type="submit" className="bg-orange text-white text-lg font-semibold p-2 rounded-md w-8/12 m-auto hover:bg-lightOrange hover:text-darkGray active:bg-[#ff8300] active:scale-110 transform duration-500 ease-in-out">Send</button>
         </form>
     );
 };
