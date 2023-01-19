@@ -27,13 +27,13 @@ const SignIn = () => {
     }, [navigate, user])
 
     return (
-        <main>
+        <main className="bg-signinImg bg-[length:400px_400px]">
             <div className="text-center text-3xl font-bold py-8">SignIn</div>
-            
+
             <div className="flex flex-col max-w-[240px] m-auto space-y-4">
-               <InputGeneric type="email" placeholder="Enter email"/>
-               <InputGeneric type="password" placeholder="Enter password"/>
-               <ButtonGeneric bgColor="bg-green" width="w-full" textColor="text-white" buttonName="Login"/>
+                <InputGeneric type="email" placeholder="Enter email" />
+                <InputGeneric type="password" placeholder="Enter password" />
+                <ButtonGeneric bgColor="bg-green" width="w-full" textColor="text-white" buttonName="Login" />
             </div>
 
             <div className="max-w-[240px] m-auto space-y-4 py-4">
