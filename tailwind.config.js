@@ -15,6 +15,11 @@ module.exports = {
         lightOrange: '#FFBD59',
         blue: '#009EFF',
         green: '#69B848',
+      },
+      backgroundImage: {
+        "heroImg-desktop": "url('/public/img/home/hero-img-desktop.png')",
+        "heroImg-mobile": "url('/public/img/home/hero-img-mobile.png')",
+        signinImg: "url('/public/img/signin/fun-bg.png')"
       }
     },
     fontFamily: {
