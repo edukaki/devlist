@@ -39,7 +39,7 @@ const ContactForm = () => {
                 className="rounded-md py-2 px-3"
             />
             {contact.touched.firstName && contact.errors.firstName ? (
-                <div>{contact.errors.firstName}</div>
+                <div className='errors'>{contact.errors.firstName}</div>
             ) : null}
 
             <label htmlFor="lastName" className="font-semibold">Last Name</label>
@@ -53,7 +53,7 @@ const ContactForm = () => {
                 className="rounded-md py-2 px-3"
             />
             {contact.touched.lastName && contact.errors.lastName ? (
-                <div>{contact.errors.lastName}</div>
+                <div className='errors'>{contact.errors.lastName}</div>
             ) : null}
 
             <label htmlFor="email" className="font-semibold">Email Address</label>
@@ -67,7 +67,7 @@ const ContactForm = () => {
                 className="rounded-md py-2 px-3"
             />
             {contact.touched.email && contact.errors.email ? (
-                <div>{contact.errors.email}</div>
+                <div className='errors'>{contact.errors.email}</div>
             ) : null}
 
             <label htmlFor="message" className="font-semibold">Message</label>
@@ -81,10 +81,10 @@ const ContactForm = () => {
                 className="rounded-md py-2 px-3"
             />
             {contact.touched.message && contact.errors.message ? (
-                <div>{contact.errors.message}</div>
+                <div className='errors'>{contact.errors.message}</div>
             ) : null}
 
-                <button type="submit" className="bg-orange text-white text-lg font-semibold p-2 rounded-md w-8/12 m-auto hover:bg-lightOrange active:bg-[#ff8300] active:scale-110 transform duration-300 easy-in-out">Send</button>
+                <button type="submit" className="bg-orange text-white text-lg font-semibold p-2 rounded-md w-8/12 m-auto hover:bg-lightOrange hover:text-darkGray active:bg-[#ff8300] active:scale-110 transform duration-500 ease-in-out">Send</button>
         </form>
     );
 };

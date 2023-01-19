@@ -36,7 +36,7 @@ const AddProjectForm = () => {
         },
     });
     return (
-        <form onSubmit={formik.handleSubmit} className="project-form space-y-4">
+        <form onSubmit={formik.handleSubmit} className="project-form flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[600px]">
 
             <div className='flex gap-10'>
                 <div className='label-input'>
@@ -127,7 +127,7 @@ const AddProjectForm = () => {
                 ) : null}
             </div>
 
-            <button type="submit">Submit</button>
+            <button className="bg-orange text-white text-lg font-semibold p-2 rounded-md w-8/12 m-auto hover:bg-lightOrange hover:text-darkGray active:bg-[#ff8300] active:scale-110 transform duration-500 ease-in-out" type="submit">Submit</button>
         </form>
     );
 };
