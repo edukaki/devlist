@@ -12,7 +12,7 @@ const ProjectListItem = () => {
                     key={project.key}
                     check={true}
                     project={project.project}
-                    author={project.author}
+                    client={project.client}
                     status={project.status}
                     indicator={project.indicator}>
                 </ProjectItem>)
