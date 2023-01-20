@@ -16,8 +16,8 @@ const Projects = () => {
             </div>
 
             <AddProjectForm />
-            <section className='w-4/5 m-auto px-8 bg-slate-200'>
-                <ProjectItem project='Project' client='Client' status='Status' indicator='Indicator' />
+            <section className='w-4/5 m-auto px-8 pb-20 bg-slate-200'>
+                <ProjectItem project='Project' client='Client' start='Start date' deadline='Deadline' indicator='Status' />
                 <ProjectListItem />
             </section>
         </main>
