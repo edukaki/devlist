@@ -9,7 +9,7 @@ const AddProjectForm = () => {
 
     const formik = useFormik({
         initialValues: {
-            key: uuid(),
+            key: '',
             project: '',
             repository: '',
             client: '',
@@ -37,7 +37,7 @@ const AddProjectForm = () => {
     });
     return (
         <form onSubmit={formik.handleSubmit} className="project-form flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[600px]">
-
+            {formik.values.key = uuid()}
             <div className='flex gap-10'>
                 <div className='label-input'>
                     <label className='form-label' htmlFor="project">Project name</label>
@@ -88,9 +88,9 @@ const AddProjectForm = () => {
                     onBlur={formik.handleBlur}
                 >
                     <option />
-                    <option value="active" label="Active" />
-                    <option value="paused" label="Paused" />
-                    <option value="closed" label="Closed" />
+                    <option value="Active" label="Active" />
+                    <option value="Paused" label="Paused" />
+                    <option value="Closed" label="Closed" />
                 </select>
                 {formik.touched.status && formik.errors.status ? (
                     <div className='errors'>*{formik.errors.status}</div>
