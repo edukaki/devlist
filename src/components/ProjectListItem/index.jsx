@@ -14,7 +14,9 @@ const ProjectListItem = () => {
                     project={project.project}
                     client={project.client}
                     status={project.status}
-                    indicator={project.indicator}>
+                    start={project.start}
+                    deadline={project.deadline}
+                >
                 </ProjectItem>)
                 )
             }
