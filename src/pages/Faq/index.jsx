@@ -1,4 +1,4 @@
-import HeadingOne from '../../components/HeadingOne'
+import Heading from '../../components/Heading'
 import DropdownQuestion from '../../components/DropdownQuestion'
 import Ruler from '../../components/Ruler'
 import faqImg from '../../img/faq/faq.png'
@@ -11,9 +11,7 @@ const Faq = () => {
 
             <div className="max-w-[550px] p-4 md:py-16 md:pl-20 pr-4 space-y-6 tracking-wider leading-8">
 
-                <div className="pl-4 bg-orange hover:bg-gradient-to-b from-orange to-green">
-                    <HeadingOne headingOneContent="Frequently Asked Questions" />
-                </div>
+                <Heading line='left' type='headingOne' headingOneContent="Frequently Asked Questions" />
 
                 <DropdownQuestion text="How do I add my projects to DevNote?"
                     bgColor="exist" paragraphContent="Add you project do DevNote by hitting the plus sign above your cards in your dashboard. Fill in the blank spaces and Devnote will sync automatically!" />
@@ -35,7 +33,7 @@ const Faq = () => {
             </section>
 
             <section className="max-w-[550px] p-4 md:py-16 md:pl-20 space-y-8">
-                <ParagraphBlock paragraphContent="Send us your question. We will be glad to help you out!"/>
+                <ParagraphBlock paragraphContent="Send us your question. We will be glad to help you out!" />
                 <ContactForm />
             </section>
 

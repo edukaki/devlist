@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import HeadingTwo from '../HeadingTwo';
+import Heading from '../Heading';
 
 const DropdownQuestion = (props) => {
     const[open,setOpen] = useState(false)
     return (
         <div>
             <button className="text-left" onClick={() => setOpen(!open)}>
-                <HeadingTwo headingTwoContent={props.text}></HeadingTwo>
+                <Heading type='headingTwo' headingTwoContent={props.text}></Heading>
                 {open===false ?
                     <i className="fa-solid fa-caret-down"></i> :
                     <i className="fa-solid fa-caret-up"></i>

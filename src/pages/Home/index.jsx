@@ -12,7 +12,7 @@ const Home = () => {
         <main>
 
             {/* Hero Information */}
-            <section className="grid grid-flow-row h-full text-darkGray md:grid-cols-2 md:bg-cover md:h-[56vw] md:bg-heroImg-desktop">
+            <section className="grid grid-flow-row h-full text-darkGray md:grid-cols-2 md:bg-cover md:h-[56vw] md:bg-heroImg-desktop 2xl:bg-heroImg-bigger 2xl:h-[36vw]">
 
                 <div className='w-screen h-[100vw] bg-heroImg-mobile bg-cover md:hidden'/>
                 {/* Hero Text */}
@@ -34,7 +34,7 @@ const Home = () => {
             </section>
 
             {/* Benefits Section */}
-            <section>
+            <section className='container-bigger'>
 
                 {/* Benefits Title */}
                 <div className="my-20 leading-9 font-roboto text-darkGray font-medium text-xl tracking-wider lg:text-2xl">
@@ -43,7 +43,7 @@ const Home = () => {
                 </div>
 
                 {/* Benefits Cards */}
-                <div className="flex flex-col font-roboto text-darkGray lg:flex-row lg:justify-around">
+                <div className="flex flex-col font-roboto text-darkGray lg:flex-row lg:justify-center lg:gap-16 xl:gap-28">
                     <InfoCard
                         src={ongoingIcon}
                         alt="ongoing projects"
@@ -75,7 +75,7 @@ const Home = () => {
             </section>
 
             {/* Call to Action */}
-            <section className="my-24 flex flex-col w-6/12 space-y-6 items-center m-auto font-roboto md:text-left">
+            <section className="container-bigger my-24 flex flex-col w-6/12 space-y-6 items-center m-auto font-roboto md:text-left">
                 <h2 className="mb-8 text-2xl tracking-wider text-center">Try it out! It's <span className="font-courier text-orange font-semibold uppercase">free!</span></h2>
                 
                 <div className="max-w-[240px] space-y-6">

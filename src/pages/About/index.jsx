@@ -1,23 +1,20 @@
 import ParagraphBlock from "../../components/ParagraphBlock";
-import HeadingOne from "../../components/HeadingOne";
-import HeadingTwo from "../../components/HeadingTwo";
+import Heading from "../../components/Heading";
 
 const About = () => {
     return (
-        <main> 
+        <main>
             <div className="m-auto p-4 md:py-16 md:pl-20 space-y-6 tracking-wider leading-8 xl:px-20">
-                
-                <div className="pl-4 bg-orange hover:bg-gradient-to-b from-orange to-green">
-                    <HeadingOne headingOneContent="About DevNote"></HeadingOne>
-                </div>
-               
-                <HeadingTwo headingTwoContent="Time Is to Be Invested, Not Spent"></HeadingTwo>
+
+                <Heading type='headingOne' line='left' headingOneContent="About DevNote"></Heading>
+
+                <Heading type='headingTwo' headingTwoContent="Time Is to Be Invested, Not Spent"></Heading>
 
                 <ParagraphBlock width="lg:w-6/12" paragraphContent="DevNote is the only developer tool created to help you keep track of your projects, check what you have done and manage your time."></ParagraphBlock>
             </div>
 
             <div className="m-auto p-4 md:py-16 md:pl-20 space-y-6 mb-10 tracking-wider leading-8 xl:px-20">
-                <HeadingTwo position="relative" headingTwoContent="The History Behind"></HeadingTwo>
+                <Heading type='headingTwo' line='bottom' headingTwoContent="The History Behind"></Heading>
 
                 <ParagraphBlock width="lg:w-6/12" paragraphContent="In 2022 Eduardo Arakaki came up with the idea of creating a personal project management tool based on his need to keep track of his developer projects."></ParagraphBlock>
 
@@ -27,7 +24,7 @@ const About = () => {
             </div>
 
         </main>
-        )
-    }
-    
-    export default About
+    )
+}
+
+export default About

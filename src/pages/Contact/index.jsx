@@ -1,7 +1,6 @@
 import React from 'react'
 import ContactForm from '../../components/ContactForm'
-import HeadingOne from '../../components/HeadingOne'
-import HeadingTwo from '../../components/HeadingTwo'
+import Heading from '../../components/Heading'
 import ParagraphBlock from '../../components/ParagraphBlock'
 import ButtonGeneric from '../../components/ButtonGeneric'
 
@@ -10,18 +9,16 @@ const Contact = () => {
         <main>
 
             <div className="max-w-[550px] p-4 md:py-16 md:pl-20 space-y-8">
-                <div className="pl-4 mb-8 bg-orange hover:bg-gradient-to-b from-orange to-green">
-                    <HeadingOne headingOneContent="Need anything? Get in touch. We can help!"/>
-                </div>
+                <Heading type='headingOne' line='left' headingOneContent="Need anything? Get in touch. We can help!" />
 
                 <div className="space-y-6 text-center md:text-left">
-                    <HeadingTwo headingTwoContent="Have any questions?"/>
-                    <ParagraphBlock paragraphContent="There is a chance somebody have already asked us."/>
-                    <ButtonGeneric bgColor="bg-orange text-white font-semibold" buttonName="Go to FAQ"/>
+                    <Heading type='headingTwo' headingTwoContent="Have any questions?" />
+                    <ParagraphBlock paragraphContent="There is a chance somebody have already asked us." />
+                    <ButtonGeneric bgColor="bg-orange text-white font-semibold" buttonName="Go to FAQ" />
                 </div>
 
                 <div>
-                    <HeadingTwo headingTwoContent="Or send us a message. We would love to hear from you."/>
+                    <Heading type='headingTwo' headingTwoContent="Or send us a message. We would love to hear from you." />
                     <ContactForm />
                 </div>
             </div>
