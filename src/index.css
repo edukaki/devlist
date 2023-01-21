@@ -17,6 +17,10 @@
 }
 
 @layer components {
+    .container-bigger{
+        @apply max-w-[1536px] m-auto
+    }
+
     .form-label{
         @apply font-courier font-bold text-xl
     }
