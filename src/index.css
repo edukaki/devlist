@@ -4,11 +4,11 @@
 
 @layer base {
     body {
-        @apply flex flex-col font-roboto text-base;
+        @apply flex flex-col font-roboto text-base bg-lightGray;
     }
 
     main {
-        @apply min-h-[calc(100vh-27rem)] pt-16 pb-5 scroll-smooth bg-lightGray md:min-h-[calc(100vh-13rem)];
+        @apply min-h-[calc(100vh-27rem)] pt-16 pb-5 scroll-smooth md:min-h-[calc(100vh-13rem)] md:pt-28;
     }
 
     footer {
@@ -36,9 +36,8 @@
     .project-form input, select{
         @apply input-generic
     }
-
+    
     .errors{
         @apply text-orange
     }
-
 }
