@@ -3,11 +3,14 @@ import ProjectCard from '../../components/ProjectCard'
 import ProjectItem from '../../components/ProjectItem'
 import ProjectListItem from '../../components/ProjectListItem'
 import AddProjectForm from '../../components/AddProjectForm'
+import Heading from '../../components/Heading'
 
 const Projects = () => {
 
     return (
         <main className='container-bigger'>
+            <Heading type='headingOne' line="left" headingOneContent="My dashboard" />
+
             <div className='max-w-full grid gap-8 p-6 md:grid-cols-2 xl:grid-cols-4'>
                 <ProjectCard title='Ongoing' content='sample' footer='Open projects' fromColor='from-amber-400' toColor='to-amber-200' />
                 <ProjectCard title='Closed' content='sample' footer='Closed and achieved projects' fromColor='from-lime-600' toColor='to-amber-200' />
