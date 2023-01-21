@@ -17,6 +17,7 @@ module.exports = {
         green: '#69B848',
       },
       backgroundImage: {
+        "heroImg-bigger": "url('/public/img/home/hero-img-bigger.png')",
         "heroImg-desktop": "url('/public/img/home/hero-img-desktop.png')",
         "heroImg-mobile": "url('/public/img/home/hero-img-mobile.png')",
         signinImg: "url('/public/img/signin/fun-bg.png')"
