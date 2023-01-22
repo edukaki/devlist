@@ -6,7 +6,7 @@ import { UserProject } from '../../context/ProjectsContext';
 
 const AddProjectForm = () => {
     const { setProject } = UserProject()
-
+    
     const formik = useFormik({
         initialValues: {
             key: '',
@@ -19,11 +19,11 @@ const AddProjectForm = () => {
         },
         validationSchema: Yup.object({
             project: Yup.string().required('Required')
-                .min(5, 'Must be at least 5 characters')
+            .min(5, 'Must be at least 5 characters')
                 .max(30, 'Must be 15 characters or less'),
             repository: Yup.string().url(),
             client: Yup.string()
-                .max(20, 'Must be 20 characters or less'),
+            .max(20, 'Must be 20 characters or less'),
             status: Yup.string().required('Required'),
             start: Yup.date().required('Required'),
             deadline: Yup.date()
@@ -35,9 +35,11 @@ const AddProjectForm = () => {
             resetForm();
         },
     });
+
+    formik.values.key = uuid()
+    
     return (
         <form onSubmit={formik.handleSubmit} className="project-form flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[600px]">
-            {formik.values.key = uuid()}
             <div className='flex gap-10'>
                 <div className='label-input'>
                     <label className='form-label' htmlFor="project">Project name</label>
