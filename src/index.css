@@ -22,7 +22,7 @@
     }
 
     .container-small{
-        @apply px-3 md:p-6
+        @apply px-3 md:px-6 2xl:px-0
     }
 
     .form-label{
