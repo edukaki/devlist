@@ -25,7 +25,7 @@ const Projects = () => {
                         <Heading type='headingTwo' headingTwoContent="Add a new project" />
                         <button className='w-10 h-10' onClick={() => setBtnAdd(!btnAdd)}>
                             <Line className='w-10' />
-                            <Line className='w-10 rotate-90' />
+                            <Line className={`w-10 transition-all duration-500 ease-in-out ${!btnAdd ? 'rotate-90' : 'opacity-0'}`} />
                         </button>
                     </div>
                     <div className='flex flex-row gap-4 items-center'>
@@ -34,7 +34,7 @@ const Projects = () => {
                     </div>
 
                 </div>
-                {!btnAdd ? '' : <AddProjectForm />}
+                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${!btnAdd ? 'max-h-0' : 'max-h-full'}`}><AddProjectForm /></div>
             </section>
             <section className='flex flex-col container-small'>
                 <div className='max-w-full grid grid-flow-row gap-8 py-3 xl:max-h-72 md:py-6 md:grid-cols-2 xl:grid-cols-4'>
