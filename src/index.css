@@ -21,6 +21,10 @@
         @apply max-w-[1536px] m-auto
     }
 
+    .container-small{
+        @apply px-3 md:p-6
+    }
+
     .form-label{
         @apply font-courier font-bold text-xl
     }
