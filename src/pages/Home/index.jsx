@@ -84,7 +84,7 @@ const Home = () => {
                         <img src={developersImg} alt="developers-img"></img>
                     </div>
                    
-                    <div>
+                    <div className="px-8 md:w-10/12 lg:max-w-[600px] xl:max-w-full xl:text-center space-y-4 leading-8">
                         <Heading type="headingTwo" headingTwoContent="Created by Developers for Developers"/>
                         <ParagraphBlock paragraphContent="We know how difficult is to keep managing time when creating a project. We can help you do that! DevNote gives the overview of time invested in each project so you will be able to learn which tasks took you longer and create a strategy for future projects."/>
                     </div>
@@ -95,7 +95,7 @@ const Home = () => {
                         <img  src={communityImg} alt="developers-img"></img>
                     </div>
 
-                    <div>
+                    <div className="px-8 md:w-10/12 lg:max-w-[600px] xl:max-w-full xl:text-center space-y-4 leading-8">
                         <Heading type="headingTwo" headingTwoContent="Open-Source for the Dev Community"/>
                         <ParagraphBlock paragraphContent="DevNote is open to receiving inputs from the development community. Have a great idea on how to improve this project? Make your contribution! The more developers are invested, the better the results."/>
                     </div>  
