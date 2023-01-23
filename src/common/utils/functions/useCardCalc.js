@@ -14,6 +14,15 @@ export const useCardCalc = () => {
     return total
   }
 
+  const getClosed = () => {
+    let total = 0
+    projectArr.map((project) => (
+      project.status === 'Closed' ? 
+      total += 1 : '' 
+    ))
+    return total
+  }
+
   const getDaysTotal = () => {
     let total = 0
     projectArr.map((project) => {
@@ -30,5 +39,6 @@ export const useCardCalc = () => {
   return {
     active:getActive(),
     daysTotal:getDaysTotal(),
+    closed:getClosed(),
   }
 }
