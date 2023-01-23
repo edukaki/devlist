@@ -78,9 +78,9 @@ const Home = () => {
                 </div>
             </section>
 
-            <section>
-                <div>
-                    <div>
+            <section className="grid grid-rows-2">
+                <div className="flex flex-col md:flex-row items-center">
+                    <div className="reveal reveal-right">
                         <img src={developersImg} alt="developers-img"></img>
                     </div>
                    
@@ -90,8 +90,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div>
-                    <div>
+                <div className="flex flex-col md:flex-row md:flex-row-reverse items-center xl:justify-between">
+                    <div className="reveal reveal-left">
                         <img  src={communityImg} alt="developers-img"></img>
                     </div>
 
