@@ -28,7 +28,7 @@ const Projects = () => {
                             <Line className={`w-10 transition-all duration-500 ease-in-out ${!btnAdd ? 'rotate-90' : 'opacity-0'}`} />
                         </button>
                     </div>
-                        <div className='flex flex-row gap-4 items-center md:max-w-[450px]'>
+                        <div className='flex flex-row gap-4 items-center bg-grayish rounded-md md:max-w-[450px]'>
                             <img src={lightbulb} alt="lightbulb icon" className='max-w-12 max-h-12' />
                             <ParagraphBlock paragraphContent="DevNote count the invested time based on your project work status. Remember to change the status of your project." />
                         </div>
