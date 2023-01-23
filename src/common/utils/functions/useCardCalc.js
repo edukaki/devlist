@@ -5,8 +5,13 @@ export const useCardCalc = () => {
 
   const { projectArr } = UserProject()
 
-  const getLength = () => {
-    return projectArr.length
+  const getActive = () => {
+    let total = 0
+    projectArr.map((project) => (
+      project.status === 'Active' ? 
+      total += 1 : '' 
+    ))
+    return total
   }
 
   const getDaysTotal = () => {
@@ -23,7 +28,7 @@ export const useCardCalc = () => {
   }
 
   return {
-    length:getLength(),
-    daysTotal:getDaysTotal()
+    active:getActive(),
+    daysTotal:getDaysTotal(),
   }
 }
