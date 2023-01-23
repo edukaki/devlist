@@ -24,17 +24,17 @@ const Projects = () => {
 
                 <Heading type='headingOne' line="left" headingOneContent="My dashboard" />
                 <div className='grid grid-flow-row gap-5 py-6'>
-                    <div className='flex flex-row justify-between items-center'>
+                    <div className='flex flex-row justify-between items-center md:max-w-[400px]'>
                         <Heading type='headingTwo' headingTwoContent="Add a new project" />
                         <button className='w-10 h-10' onClick={() => setBtnAdd(!btnAdd)}>
                             <Line className='w-10' />
                             <Line className={`w-10 transition-all duration-500 ease-in-out ${!btnAdd ? 'rotate-90' : 'opacity-0'}`} />
                         </button>
                     </div>
-                    <div className='flex flex-row gap-4 items-center'>
-                        <img src={lightbulb} alt="lightbulb icon" className='max-w-12 max-h-12' />
-                        <ParagraphBlock paragraphContent="DevNote count the invested time based on your project work status. Remember to change the status of your project." />
-                    </div>
+                        <div className='flex flex-row gap-4 items-center bg-grayish rounded-md md:max-w-[450px]'>
+                            <img src={lightbulb} alt="lightbulb icon" className='max-w-12 max-h-12' />
+                            <ParagraphBlock paragraphContent="DevNote count the invested time based on your project work status. Remember to change the status of your project." />
+                        </div>
 
                 </div>
                 <div className={`overflow-hidden transition-all duration-500 ease-in-out ${!btnAdd ? 'max-h-0' : 'max-h-full'}`}><AddProjectForm /></div>
