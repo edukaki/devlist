@@ -10,18 +10,20 @@ import ParagraphBlock from '../../components/ParagraphBlock'
 import Heading from '../../components/Heading'
 import communityImg from '../../img/home/community.png'
 import developersImg from '../../img/home/developers.png'
+import Elementx from '../../components/Elementx'
 
 const Home = () => {
+
     return (
         <main>
 
             {/* Hero Information */}
             <section className="grid grid-flow-row h-full text-darkGray md:grid-cols-2 md:bg-cover md:h-[56vw] md:bg-heroImg-desktop 2xl:bg-heroImg-bigger 2xl:h-[36vw]">
 
-                <div className='w-screen h-[100vw] bg-heroImg-mobile bg-cover md:hidden'/>
+                <div className='w-screen h-[100vw] bg-heroImg-mobile bg-cover md:hidden' />
                 {/* Hero Text */}
                 <div className="flex flex-col min-h-max tracking-wider m-auto space-y-6 p-5">
-                    
+
                     <div className="xl:max-w-[600px] min-[2500px]:max-w-[1400px]">
                         <h1 className="font-courier font-bold text-4xl text-center pt-3 md:text-left lg:text-5xl xl:text-6xl min-[2500px]:text-8xl">DevNote</h1>
                         <p className="text-xl text-center m-auto pt-6 sm:w-2/3 md:text-left md:m-0 lg:text-3xl xl:text-4xl min-[2500px]:text-6xl">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
@@ -83,29 +85,30 @@ const Home = () => {
                     <div className="reveal reveal-right">
                         <img src={developersImg} alt="developers-img"></img>
                     </div>
-                   
+
                     <div className="px-8 md:w-10/12 lg:max-w-[600px] xl:max-w-full xl:text-center space-y-4 leading-8">
-                        <Heading type="headingTwo" headingTwoContent="Created by Developers for Developers"/>
-                        <ParagraphBlock paragraphContent="We know how difficult is to keep managing time when creating a project. We can help you do that! DevNote gives the overview of time invested in each project so you will be able to learn which tasks took you longer and create a strategy for future projects."/>
+                        <Heading type="headingTwo" headingTwoContent="Created by Developers for Developers" />
+                        <ParagraphBlock paragraphContent="We know how difficult is to keep managing time when creating a project. We can help you do that! DevNote gives the overview of time invested in each project so you will be able to learn which tasks took you longer and create a strategy for future projects." />
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row md:flex-row-reverse items-center xl:justify-between">
-                    <div className="reveal reveal-left">
-                        <img  src={communityImg} alt="developers-img"></img>
+                {/* <div className="flex flex-col md:flex-row-reverse items-center xl:justify-between">
+                    <div className="reveal reveal-left overflow-hidden">
+                        <img src={communityImg} alt="developers-img" className='translate-x-[100%] hover:translate-x-0 transition-all duration-100'></img>
                     </div>
 
                     <div className="px-8 md:w-10/12 lg:max-w-[600px] xl:max-w-full xl:text-center space-y-4 leading-8">
-                        <Heading type="headingTwo" headingTwoContent="Open-Source for the Dev Community"/>
-                        <ParagraphBlock paragraphContent="DevNote is open to receiving inputs from the development community. Have a great idea on how to improve this project? Make your contribution! The more developers are invested, the better the results."/>
-                    </div>  
-                </div>
+                        <Heading type="headingTwo" headingTwoContent="Open-Source for the Dev Community" />
+                        <ParagraphBlock paragraphContent="DevNote is open to receiving inputs from the development community. Have a great idea on how to improve this project? Make your contribution! The more developers are invested, the better the results." />
+                    </div>
+                </div> */}
+                <Elementx img={communityImg} />
             </section>
 
             {/* Call to Action */}
             <section className="container-bigger my-24 flex flex-col w-6/12 space-y-6 items-center m-auto font-roboto md:text-left">
                 <h2 className="mb-8 text-2xl tracking-wider text-center">Try it out! It's <span className="font-courier text-orange font-semibold uppercase">free!</span></h2>
-                
+
                 <div className="max-w-[240px] space-y-6">
                     {/* Call to Action Email Input */}
                     <InputGeneric margin="m-auto" width="w-full" type="input" placeholder="email"></InputGeneric>
