@@ -26,7 +26,7 @@ const DevelopersCard = (props) => {
 
   function onScroll() {
     setTopPosition(elementRef.current.getBoundingClientRect().top)
-    if (topPosition < (window.innerHeight - 500)) {
+    if (topPosition < (window.innerHeight - 300)) {
       setVisible(true)
     } else {
       setVisible(false)
@@ -39,7 +39,7 @@ const DevelopersCard = (props) => {
         <img src={props.img} alt={props.alt} className={`transition-all ease-in-out duration-500 ${visible ? 'translate-x-0 opacity-100' : props.flow === 'reverse' ? 'translate-x-[100%] opacity-0' : '-translate-x-[100%] opacity-0'}`}></img>
       </div>
 
-      <div className="px-8 md:w-10/12 lg:max-w-[600px] xl:max-w-full xl:text-center leading-8">
+      <div className="px-8 md:w-10/12 lg:max-w-[600px] xl:max-w-full xl:text-center leading-8 overflow-hidden">
         <div className={`space-y-4 transition-all ease-in-out duration-500 ${visible ? 'translate-x-0 opacity-100' : props.flow === 'reverse' ? '-translate-x-[100%] opacity-0' : 'translate-x-[100%] opacity-0'}`}>
           <Heading type="headingTwo" headingTwoContent={props.title} />
           <ParagraphBlock paragraphContent={props.content} />
