@@ -6,11 +6,9 @@ import remainingTimeIcon from '../../img/icons/remaining-icon.png'
 import InfoCard from '../../components/InfoCard'
 import ButtonGeneric from '../../components/ButtonGeneric'
 import InputGeneric from '../../components/InputGeneric'
-import ParagraphBlock from '../../components/ParagraphBlock'
-import Heading from '../../components/Heading'
 import communityImg from '../../img/home/community.png'
 import developersImg from '../../img/home/developers.png'
-import Elementx from '../../components/Elementx'
+import DevelopersCard from '../../components/DevelopersCard'
 
 const Home = () => {
 
@@ -81,28 +79,20 @@ const Home = () => {
             </section>
 
             <section className="grid grid-rows-2">
-                <div className="flex flex-col md:flex-row items-center">
-                    <div className="reveal reveal-right">
-                        <img src={developersImg} alt="developers-img"></img>
-                    </div>
+                <DevelopersCard
+                img={developersImg}
+                alt="developers-img"
+                title="Created by Developers for Developers"
+                content="We know how difficult is to keep managing time when creating a project. We can help you do that! DevNote gives the overview of time invested in each project so you will be able to learn which tasks took you longer and create a strategy for future projects."
+                />
 
-                    <div className="px-8 md:w-10/12 lg:max-w-[600px] xl:max-w-full xl:text-center space-y-4 leading-8">
-                        <Heading type="headingTwo" headingTwoContent="Created by Developers for Developers" />
-                        <ParagraphBlock paragraphContent="We know how difficult is to keep managing time when creating a project. We can help you do that! DevNote gives the overview of time invested in each project so you will be able to learn which tasks took you longer and create a strategy for future projects." />
-                    </div>
-                </div>
-
-                {/* <div className="flex flex-col md:flex-row-reverse items-center xl:justify-between">
-                    <div className="reveal reveal-left overflow-hidden">
-                        <img src={communityImg} alt="developers-img" className='translate-x-[100%] hover:translate-x-0 transition-all duration-100'></img>
-                    </div>
-
-                    <div className="px-8 md:w-10/12 lg:max-w-[600px] xl:max-w-full xl:text-center space-y-4 leading-8">
-                        <Heading type="headingTwo" headingTwoContent="Open-Source for the Dev Community" />
-                        <ParagraphBlock paragraphContent="DevNote is open to receiving inputs from the development community. Have a great idea on how to improve this project? Make your contribution! The more developers are invested, the better the results." />
-                    </div>
-                </div> */}
-                <Elementx img={communityImg} />
+                <DevelopersCard
+                flow="reverse"
+                img={communityImg}
+                alt="community-img"
+                title="Open-Source for the Dev Community"
+                content="DevNote is open to receiving inputs from the development community. Have a great idea on how to improve this project? Make your contribution! The more developers are invested, the better the results." 
+                />
             </section>
 
             {/* Call to Action */}
