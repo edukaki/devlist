@@ -9,8 +9,8 @@ import faqHelpImg from '../../img/faq/faq-help.png'
 const Faq = () => {
     return (
         <main>
-            <section className='flex flex-col md:flex-row'>
-                <div className="max-w-[550px] p-4 md:py-16 md:pl-20 xl:max-w-[1000px] pr-4 space-y-6 tracking-wider leading-8">
+            <section className='container-bigger container-small flex flex-col md:flex-row'>
+                <div className="p-4 md:py-16 pr-4 space-y-6 tracking-wider leading-8">
 
                     <Heading line='left' type='headingOne' headingOneContent="Frequently Asked Questions" />
 
@@ -38,7 +38,7 @@ const Faq = () => {
                 </div>
             </section>
 
-            <section className="flex flex-col-reverse justify-around md:flex-row max-w-[2000px] m-auto space-y-8">
+            <section className="container-bigger container-small flex flex-col-reverse justify-around md:flex-row m-auto space-y-8">
                 <img src={faqImg} alt="decorative question mark"></img>
 
                 <div className='flex flex-col text-center space-y-4 md:text-left md:place-content-center'>
@@ -48,8 +48,8 @@ const Faq = () => {
                 
             </section>
 
-            <section className="max-w-[550px] p-4 md:py-16 md:pl-20 space-y-8">
-                <Heading type="headingTwo" headingTwoContent="Send us your question by filling out the form"></Heading>
+            <section className="container-bigger container-small p-4 md:py-16 space-y-8">
+                <div className='text-center'><Heading type="headingTwo" headingTwoContent="Send us your question by filling out the form" /></div>
                 <ContactForm />
             </section>
 

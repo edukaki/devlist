@@ -6,8 +6,8 @@ import timeLineImg from "../../img/about/time-line.png";
 const About = () => {
     return (
         <main>
-            <section className='flex flex-col md:flex-row'>
-                <div className="m-auto p-4 md:py-16 md:pl-20 space-y-6 tracking-wider leading-8 xl:px-20">
+            <section className='container-bigger constainer-small flex flex-col md:flex-row'>
+                <div className="m-auto p-4 md:py-16 space-y-6 tracking-wider leading-8 xl:px-20">
 
                     <Heading type='headingOne' line='left' headingOneContent="About DevNote"></Heading>
 
@@ -24,8 +24,8 @@ const About = () => {
 
             </section>
 
-            <section className='flex flex-col md:flex-row'>
-                <div className="p-4 md:py-16 md:pl-20 space-y-6 mb-10 tracking-wider leading-8 xl:px-20">
+            <section className='container-bigger constainer-small flex flex-col md:flex-row'>
+                <div className="p-4 md:py-16 space-y-6 mb-10 tracking-wider leading-8 xl:px-20">
                     <Heading type='headingTwo' line='bottom' headingTwoContent="The History Behind"></Heading>
 
                     <ParagraphBlock width="lg:w-6/12" paragraphContent="In 2022 Eduardo Arakaki came up with the idea of creating a personal project management tool based on his need to keep track of his developer projects."></ParagraphBlock>

@@ -78,7 +78,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="grid grid-rows-2">
+            <section className="container-bigger grid grid-rows-2">
                 <DevelopersCard
                 img={developersImg}
                 alt="developers-img"

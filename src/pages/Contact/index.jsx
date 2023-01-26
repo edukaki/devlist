@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <main>
 
-            <div className="max-w-[550px] p-4 md:py-16 md:pl-20 space-y-8">
+            <div className="container-bigger p-4 md:py-16 md:m-auto md:px-10 space-y-8">
                 <Heading type='headingOne' line='left' headingOneContent="Need anything? Get in touch. We can help!" />
 
                 <div className="space-y-6 text-center md:text-left">
@@ -18,7 +18,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                    <Heading type='headingTwo' headingTwoContent="Or send us a message. We would love to hear from you." />
+                    <div className='md:text-center'><Heading type='headingTwo' headingTwoContent="Or send us a message. We would love to hear from you." /></div>
                     <ContactForm />
                 </div>
             </div>
