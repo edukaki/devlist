@@ -25,6 +25,11 @@ const Faq = () => {
 
                 <DropdownQuestion text="Do I have to pay in order to use DevNote?"
                     bgColor="exist" paragraphContent="No. DevNote is completely FREE!" />
+                
+                <Ruler />
+
+                <DropdownQuestion text="Why would my company use DevNote?"
+                    bgColor="exist" paragraphContent="This is an excelent question. If your company has a development team, then DevNote is for you. DevNote empowers the developers to keep track of the time spent on projects, so they can be more efficient and deliver on deadline." />
             </div>
 
             <section className="flex flex-col justify-around md:flex-row max-w-[2000px] m-auto">
