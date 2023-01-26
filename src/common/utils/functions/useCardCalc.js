@@ -8,8 +8,8 @@ export const useCardCalc = () => {
   const getActive = () => {
     let total = 0
     projectArr.map((project) => (
-      project.status === 'Active' ? 
-      total += 1 : '' 
+      project.status === 'Active' ?
+        total += 1 : ''
     ))
     return total
   }
@@ -17,8 +17,8 @@ export const useCardCalc = () => {
   const getClosed = () => {
     let total = 0
     projectArr.map((project) => (
-      project.status === 'Closed' ? 
-      total += 1 : '' 
+      project.status === 'Closed' ?
+        total += 1 : ''
     ))
     return total
   }
@@ -36,9 +36,21 @@ export const useCardCalc = () => {
     return total
   }
 
+  const getNextDeadline = () => {
+    const minDate = new Date(
+      Math.min(
+        ...projectArr.map((project) => {
+          return new Date(project.deadline)
+        })
+      )
+    )
+    return `${minDate.getDate()}-${minDate.getUTCMonth() + 1}-${minDate.getFullYear()}`
+  }
+
   return {
-    active:getActive(),
-    daysTotal:getDaysTotal(),
-    closed:getClosed(),
+    active: getActive(),
+    daysTotal: getDaysTotal(),
+    closed: getClosed(),
+    nextDeadline: getNextDeadline()
   }
 }
