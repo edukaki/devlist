@@ -31,10 +31,10 @@ const Projects = () => {
                             <Line className={`w-10 transition-all duration-500 ease-in-out ${!btnAdd ? 'rotate-90' : 'opacity-0'}`} />
                         </button>
                     </div>
-                        <div className='flex flex-row gap-4 items-center bg-grayish rounded-md md:max-w-[450px]'>
-                            <img src={lightbulb} alt="lightbulb icon" className='max-w-12 max-h-12' />
-                            <ParagraphBlock paragraphContent="DevNote count the invested time based on your project work status. Remember to change the status of your project." />
-                        </div>
+                    <div className='flex flex-row gap-4 items-center bg-grayish rounded-md md:max-w-[450px]'>
+                        <img src={lightbulb} alt="lightbulb icon" className='max-w-12 max-h-12' />
+                        <ParagraphBlock paragraphContent="DevNote count the invested time based on your project work status. Remember to change the status of your project." />
+                    </div>
 
                 </div>
                 <div className={`overflow-hidden transition-all duration-500 ease-in-out ${!btnAdd ? 'max-h-0' : 'max-h-full'}`}><AddProjectForm /></div>
@@ -44,13 +44,9 @@ const Projects = () => {
                     <ProjectCard title='Ongoing' icon={arrowCircle} alt='arrow circle icon' content={`${cardData.active} projects`} footer='Open projects' fromColor='from-amber-400' toColor='to-amber-200' />
                     <ProjectCard title='Closed' icon={regular('circle-check')} content={`${cardData.closed} projects`} footer='Closed and achieved projects' fromColor='from-lime-600' toColor='to-amber-200' />
                     <ProjectCard title='Total time' icon={regular('clock')} content={`${cardData.daysTotal} days`} footer='Invested in all projects' fromColor='from-lime-300' toColor='to-sky-500' />
-                    <ProjectCard title='Remaining time' icon={regular('hourglass')} content='sample' footer='Until all projects deadlines' fromColor='from-red-500' toColor='to-amber-200' />
+                    <ProjectCard title='Remaining time' icon={regular('hourglass')} content={`${cardData.nextDeadline} `} footer='Until all projects deadlines' fromColor='from-red-500' toColor='to-amber-200' />
                 </div>
-
-                <div className='w-full px-3 mt-10 pb-20 md:mt-0 md:px-6 m-auto bg-slate-200'>
-                    <ProjectItem project='Project' client='Client' start='Start date' deadline='Deadline' indicator='Status' />
-                    <ProjectListItem />
-                </div>
+                <ProjectListItem />
             </section>
         </main>
     )
