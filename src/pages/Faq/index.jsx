@@ -38,13 +38,18 @@ const Faq = () => {
                 </div>
             </section>
 
-            <section className="flex flex-col justify-around md:flex-row max-w-[2000px] m-auto">
-                <h2 className="text-xl my-auto text-center tracking-wider md:text-start md:px-4 md:w-6/12 lg:text-2xl">Still wondering if <span className="font-courier text-orange">DevNote is the right</span> tool for you?</h2>
+            <section className="flex flex-col-reverse justify-around md:flex-row max-w-[2000px] m-auto space-y-8">
                 <img src={faqImg} alt="decorative question mark"></img>
+
+                <div className='flex flex-col text-center space-y-4 md:text-left md:place-content-center'>
+                <h2 className="text-xl text-center tracking-wider md:text-start lg:text-4xl">Still wondering if <span className="font-courier text-orange">DevNote is the right</span> tool for you?</h2>
+                <ParagraphBlock fontSize="lg:text-3xl" paragraphContent="Send us your question. We will be glad to help you out!" />
+                </div>
+                
             </section>
 
             <section className="max-w-[550px] p-4 md:py-16 md:pl-20 space-y-8">
-                <ParagraphBlock paragraphContent="Send us your question. We will be glad to help you out!" />
+                <Heading type="headingTwo" headingTwoContent="Send us your question by filling out the form"></Heading>
                 <ContactForm />
             </section>
 
