@@ -36,11 +36,11 @@ const DevelopersCard = (props) => {
   return (
     <div ref={elementRef} className={`flex flex-col ${props.flow === "reverse" ? 'md:flex-row-reverse' : 'md:flex-row'} items-center xl:justify-between group`}>
       <div className="overflow-hidden">
-        <img src={props.img} alt={props.alt} className={`transition-all ease-in-out duration-500 ${visible ? 'translate-x-0 opacity-100' : props.flow === 'reverse' ? 'translate-x-[100%] opacity-0' : '-translate-x-[100%] opacity-0'}`}></img>
+        <img src={props.img} alt={props.alt} className={`transition-all ease-in-out duration-1000 ${visible ? 'translate-x-0 opacity-100' : props.flow === 'reverse' ? 'translate-x-[100%] opacity-0' : '-translate-x-[100%] opacity-0'}`}></img>
       </div>
 
       <div className="px-8 md:w-10/12 lg:max-w-[600px] xl:max-w-full xl:text-center leading-8 overflow-hidden">
-        <div className={`space-y-4 transition-all ease-in-out duration-500 ${visible ? 'translate-x-0 opacity-100' : props.flow === 'reverse' ? '-translate-x-[100%] opacity-0' : 'translate-x-[100%] opacity-0'}`}>
+        <div className={`space-y-4 transition-all ease-in-out duration-1000 ${visible ? 'translate-x-0 opacity-100' : props.flow === 'reverse' ? '-translate-x-[100%] opacity-0' : 'translate-x-[100%] opacity-0'}`}>
           <Heading type="headingTwo" headingTwoContent={props.title} />
           <ParagraphBlock paragraphContent={props.content} />
         </div>
