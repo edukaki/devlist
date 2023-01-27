@@ -1,3 +1,5 @@
+import { faTrashCan } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { UserProject } from '../../context/ProjectsContext'
 import ProjectItem from '../ProjectItem'
@@ -12,6 +14,9 @@ const ProjectListItem = (props) => {
                 <button className='relative' onClick={() => setBtnAdd(!btnAdd)}>
                     <div className='w-5 h-1 rounded bg-slate-100' />
                     <div className={`absolute top-0 w-5 h-1 rounded bg-slate-100 transition-all duration-500 ease-in-out ${!btnAdd ? 'rotate-90' : 'opacity-0'}`} />
+                </button>
+                <button>
+                    <FontAwesomeIcon icon={faTrashCan} size='xl' color='#f1f5f9' />
                 </button>
             </div>
             <div className='w-full px-3 mt-10 pb-20 md:mt-0 md:px-6 m-auto bg-slate-200'>
