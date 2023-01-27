@@ -44,7 +44,7 @@ const Projects = () => {
                     <ProjectCard title='Ongoing' icon={arrowCircle} alt='arrow circle icon' content={`${cardData.active} projects`} footer='Open projects' fromColor='from-amber-400' toColor='to-amber-200' />
                     <ProjectCard title='Closed' icon={regular('circle-check')} content={`${cardData.closed} projects`} footer='Closed and achieved projects' fromColor='from-lime-600' toColor='to-amber-200' />
                     <ProjectCard title='Total time' icon={regular('clock')} content={`${cardData.daysTotal} days`} footer='Invested in all projects' fromColor='from-lime-300' toColor='to-sky-500' />
-                    <ProjectCard title='Remaining time' icon={regular('hourglass')} content={`${cardData.nextDeadline} `} footer='Until all projects deadlines' fromColor='from-red-500' toColor='to-amber-200' />
+                    <ProjectCard title='Next deadline' icon={regular('hourglass')} content={`${cardData.nextDeadline} `} footer='The next project deadline' fromColor='from-red-500' toColor='to-amber-200' />
                 </div>
                 <ProjectListItem />
             </section>
