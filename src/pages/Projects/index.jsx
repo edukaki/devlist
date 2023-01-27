@@ -1,6 +1,5 @@
 import React from 'react'
 import ProjectCard from '../../components/ProjectCard'
-import ProjectItem from '../../components/ProjectItem'
 import ProjectListItem from '../../components/ProjectListItem'
 import AddProjectForm from '../../components/AddProjectForm'
 import Heading from '../../components/Heading'
@@ -46,7 +45,7 @@ const Projects = () => {
                     <ProjectCard title='Total time' icon={regular('clock')} content={`${cardData.daysTotal} days`} footer='Invested in all projects' fromColor='from-lime-300' toColor='to-sky-500' />
                     <ProjectCard title='Next deadline' icon={regular('hourglass')} content={`${cardData.nextDeadline} `} footer='The next project deadline' fromColor='from-red-500' toColor='to-amber-200' />
                 </div>
-                <ProjectListItem />
+                <ProjectListItem btnFunction={{btnAdd,setBtnAdd}} />
             </section>
         </main>
     )
