@@ -25,6 +25,9 @@ const ProjectListItem = (props) => {
                         <img src={filterIcon} alt='filter icon' className='h-7' />
                     </button>
                     <button className='p-3'>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} size='xl' color='#f1f5f9' />
+                    </button>
+                    <button className='p-3'>
                         <FontAwesomeIcon icon={faTrashCan} size='xl' color='#f1f5f9' />
                     </button>
                 </div>
