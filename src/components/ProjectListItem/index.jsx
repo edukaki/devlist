@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { UserProject } from '../../context/ProjectsContext'
 import ProjectItem from '../ProjectItem'
+import filterIcon from '../../img/icons/filter.png'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 
 const ProjectListItem = (props) => {
@@ -18,11 +20,16 @@ const ProjectListItem = (props) => {
                     </div>
                     <span>Add Project</span>
                 </button>
-                <button>
+                <div className='flex flex-row items-center'>
+                    <button className='p-3'>
+                        <img src={filterIcon} alt='filter icon' className='h-7' />
+                    </button>
+                    <button className='p-3'>
                         <FontAwesomeIcon icon={faTrashCan} size='xl' color='#f1f5f9' />
                     </button>
                 </div>
-            <div className='w-full px-3 mt-10 pb-20 md:mt-0 md:px-6 m-auto bg-slate-200'>
+            </div>
+            <div className='w-full px-3 pb-20 md:px-6 m-auto bg-slate-200'>
                 <div className='font-bold'><ProjectItem project='Project' client='Client' start='Start date' deadline='Deadline' indicator='Status' /></div>
                 {projectArr.map((project) => (
                     <ProjectItem
