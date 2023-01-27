@@ -34,9 +34,10 @@ const ProjectListItem = (props) => {
             </div>
             <div className='w-full px-3 pb-20 md:px-6 m-auto bg-slate-200'>
                 <div className='font-bold'><ProjectItem project='Project' client='Client' start='Start date' deadline='Deadline' indicator='Status' /></div>
-                {projectArr.map((project) => (
+                {projectArr.map((project,index) => (
                     <ProjectItem
-                        key={project.key}
+                        key={index}
+                        dataKey={project.key}
                         check={true}
                         project={project.project}
                         client={project.client}
