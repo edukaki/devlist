@@ -1,12 +1,25 @@
 import React from 'react'
 
 const ProjectItem = (props) => {
+    const isChecked = props.isChecked
+    const setIsChecked = props.setIsChecked
+
+    const handleChange = (event) => {
+        var updatedList = [...isChecked]
+        if (event.target.checked) {
+            updatedList = [...isChecked, props.dataKey]
+        } else {
+            updatedList.splice(isChecked.indexOf(props.dataKey), 1)
+        }
+        setIsChecked(updatedList)
+    }
+
     return (
         <div className='grid grid-cols-4 md:grid-cols-5 text-center py-7 border border-b-orange'>
-
             {props.check === true ?
                 <div className='flex flex-row gap-5 col-span-2 md:col-span-1 text-left'>
-                    <input type='checkbox' className='w-[2rem]' />
+                    <input type='checkbox' className='w-[2rem]'
+                        onChange={handleChange} />
                     <span>{props.project}</span>
                 </div> :
                 <span className='col-span-2 md:col-span-1'>{props.project}</span>
