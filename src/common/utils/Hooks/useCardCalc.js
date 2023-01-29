@@ -37,6 +37,9 @@ export const useCardCalc = () => {
   }
 
   const getNextDeadline = () => {
+    if(projectArr.length === 0) {
+      return 'No projects yet'
+    }
     const minDate = new Date(
       Math.min(
         ...projectArr.map((project) => {
@@ -48,9 +51,9 @@ export const useCardCalc = () => {
   }
 
   return {
-    active: getActive(),
-    daysTotal: getDaysTotal(),
-    closed: getClosed(),
-    nextDeadline: getNextDeadline()
+    active: projectArr&&getActive(),
+    daysTotal: projectArr&&getDaysTotal(),
+    closed: projectArr&&getClosed(),
+    nextDeadline: projectArr&&getNextDeadline()
   }
 }
