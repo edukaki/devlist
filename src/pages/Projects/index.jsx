@@ -8,17 +8,19 @@ import lightbulb from '../../img/icons/lightbulb.png'
 import { ReactComponent as Line } from '../../img/icons/line.svg'
 import { useState } from 'react'
 import { regular } from "@fortawesome/fontawesome-svg-core/import.macro"
-import { useCardCalc } from "../../common/utils/functions/useCardCalc"
+import { useCardCalc } from "../../common/utils/Hooks/useCardCalc"
 import arrowCircle from '../../img/icons/arrow-circle.png'
+import { UserProject } from '../../context/ProjectsContext'
 
 const Projects = () => {
 
     const [btnAdd, setBtnAdd] = useState(false)
     const cardData = useCardCalc()
-
-
+    const { projectArr } = UserProject()
     return (
         <main className='grid grid-flow-row container-bigger'>
+            {projectArr? 
+            <>
             <section className='container-small pt-6 md:pt-0'>
 
                 <Heading type='headingOne' line="left" headingOneContent="My dashboard" />
@@ -45,8 +47,13 @@ const Projects = () => {
                     <ProjectCard title='Total time' icon={regular('clock')} content={`${cardData.daysTotal} days`} footer='Invested in all projects' fromColor='from-lime-300' toColor='to-sky-500' />
                     <ProjectCard title='Next deadline' icon={regular('hourglass')} content={`${cardData.nextDeadline} `} footer='The next project deadline' fromColor='from-red-500' toColor='to-amber-200' />
                 </div>
-                <ProjectListItem btnFunction={{btnAdd,setBtnAdd}} />
+                <ProjectListItem btnFunction={{ btnAdd, setBtnAdd }} />
             </section>
+            </> : 
+            <section className='m-auto'>
+                <h1 className='animate-pulse text-4xl'>Loading...</h1>
+            </section>
+            }
         </main>
     )
 
