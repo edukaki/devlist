@@ -13,7 +13,7 @@ const SignIn = () => {
     const handleGoogleSignIn = async () => {
         try {
             await googleSignIn()
-            navigate('/')
+            navigate('/dashboard')
         }
         catch (error) {
             console.log(error)
@@ -22,7 +22,7 @@ const SignIn = () => {
 
     useEffect(() => {
         if (user !== null) {
-            navigate('/')
+            navigate(`/dashboard/user?:${user.uid}`)
         }
     }, [navigate, user])
 
