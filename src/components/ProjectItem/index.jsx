@@ -1,17 +1,17 @@
 import React from 'react'
+import { UserProject } from '../../context/ProjectsContext'
 
 const ProjectItem = (props) => {
-    const isChecked = props.isChecked
-    const setIsChecked = props.setIsChecked
+    const { checkedItems, setCheckedItems } = UserProject()
 
     const handleChange = (event) => {
-        var updatedList = [...isChecked]
+        var updatedList = [...checkedItems]
         if (event.target.checked) {
-            updatedList = [...isChecked, props.dataKey]
+            updatedList = [...checkedItems, props.dataKey]
         } else {
-            updatedList.splice(isChecked.indexOf(props.dataKey), 1)
+            updatedList.splice(checkedItems.indexOf(props.dataKey), 1)
         }
-        setIsChecked(updatedList)
+        setCheckedItems(updatedList)
     }
 
     return (
