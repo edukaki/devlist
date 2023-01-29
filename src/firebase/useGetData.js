@@ -2,7 +2,7 @@ import { collection, getDocs } from 'firebase/firestore'
 import { useEffect } from 'react'
 import { db } from './firebase'
 
-function useGetData(user, setProjectArr, project) {
+function useGetData(user, setProjectArr, project, projectArr) {
     useEffect(() => {
         const getData = async () => {
             const data = await getDocs(collection(db, 'users', user.uid, 'projects'));
@@ -12,7 +12,7 @@ function useGetData(user, setProjectArr, project) {
             })));
         };
         user.uid && getData();
-    }, [project, user.uid, setProjectArr]);
+    }, [project, user.uid, setProjectArr, projectArr]);
 }
 
 export default useGetData
