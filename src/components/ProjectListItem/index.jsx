@@ -1,15 +1,14 @@
 import { faTrashCan } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
 import { UserProject } from '../../context/ProjectsContext'
 import ProjectItem from '../ProjectItem'
 import filterIcon from '../../img/icons/filter.png'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
-
 const ProjectListItem = (props) => {
-    const { projectArr } = UserProject()
+    const { projectArr, handleDelete } = UserProject()
     const { btnAdd, setBtnAdd } = props.btnFunction
+
     return (
         <>
             <div className='flex flex-row justify-between items-center gap-6 w-full px-3 mt-10 md:mt-0 md:px-6 bg-slate-400'>
@@ -27,14 +26,14 @@ const ProjectListItem = (props) => {
                     <button className='p-3'>
                         <FontAwesomeIcon icon={faMagnifyingGlass} size='xl' color='#f1f5f9' />
                     </button>
-                    <button className='p-3'>
+                    <button className='p-3' onClick={handleDelete}>
                         <FontAwesomeIcon icon={faTrashCan} size='xl' color='#f1f5f9' />
                     </button>
                 </div>
             </div>
-            <div className='w-full px-3 pb-20 md:px-6 m-auto bg-slate-200'>
+            <div className='w-full px-3 pb-20 mb-20 md:px-6 bg-slate-200'>
                 <div className='font-bold'><ProjectItem project='Project' client='Client' start='Start date' deadline='Deadline' indicator='Status' /></div>
-                {projectArr.map((project,index) => (
+                {projectArr.map((project, index) => (
                     <ProjectItem
                         key={index}
                         dataKey={project.key}
@@ -44,10 +43,8 @@ const ProjectListItem = (props) => {
                         status={project.status}
                         start={project.start}
                         deadline={project.deadline}
-                    >
-                    </ProjectItem>)
-                )
-                }
+                    />)
+                )}
             </div>
         </>
     )
