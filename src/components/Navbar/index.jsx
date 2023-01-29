@@ -48,7 +48,7 @@ const Navbar = () => {
                     {!user ?
                         <div className="flex items-center md:order-2 text-base text-gray-700 font-bold hover:text-orange">
                             <Link to='/signin'>
-                                Log In
+                                Login
                             </Link>
                         </div>
                         :
@@ -73,7 +73,7 @@ const Navbar = () => {
                                     </li>
                                     <li>
                                         <div className="block px-4 py-2 hover:bg-gray-100 hover:cursor-pointer"
-                                            onClick={() => handleSignOut()}>Sign out</div>
+                                            onClick={() => handleSignOut()}>Logout</div>
                                     </li>
                                 </ul>
                             </div>
