@@ -12,7 +12,7 @@ import { useCardCalc } from "../../common/utils/Hooks/useCardCalc"
 import arrowCircle from '../../img/icons/arrow-circle.png'
 import { UserProject } from '../../context/ProjectsContext'
 
-const Projects = () => {
+const Dashboard = () => {
 
     const [btnAdd, setBtnAdd] = useState(false)
     const cardData = useCardCalc()
@@ -60,4 +60,4 @@ const Projects = () => {
 
 }
 
-export default Projects
+export default Dashboard

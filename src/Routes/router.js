@@ -2,7 +2,7 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import Protected from "../common/utils/Protected";
 import Home from "../pages/Home";
 import Layout from "../Layout/Layout";
-import Projects from "../pages/Projects";
+import Dashboard from "../pages/Dashboard";
 import About from "../pages/About";
 import SignIn from "../pages/SignIn";
 import Faq from "../pages/Faq";
@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
                 element: (
                     <Protected>
                         <ProjectContextProvider>
-                            <Projects />
+                            <Dashboard />
                         </ProjectContextProvider>
                     </Protected>
                 ),
