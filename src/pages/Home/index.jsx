@@ -20,19 +20,18 @@ const Home = () => {
 
                 <div className='w-screen h-[100vw] bg-heroImg-mobile bg-cover md:hidden' />
                 {/* Hero Text */}
-                <div className="flex flex-col min-h-max tracking-wider m-auto space-y-6 p-5">
-
-                    <div className="xl:max-w-[600px] min-[2500px]:max-w-[1400px]">
+                <div className="flex flex-col min-h-max tracking-wider m-auto space-y-6 p-5 xl:pl-20">
+                    <div>
                         <h1 className="font-courier font-bold text-4xl text-center pt-3 md:text-left lg:text-5xl xl:text-6xl min-[2500px]:text-8xl">DevNote</h1>
-                        <p className="text-xl text-center m-auto pt-6 sm:w-2/3 md:text-left md:m-0 lg:text-3xl xl:text-4xl min-[2500px]:text-6xl">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
-                    </div>
+                        <p className="text-xl text-center m-auto pt-6 xl:w-2/3 md:text-left md:m-0 lg:text-3xl xl:text-4xl min-[2500px]:text-6xl">The ultimate <span className="font-courier uppercase font-bold text-orange">free</span> <span className="font-courier font-bold text-orange">developer</span> tool to keep track of your projects</p>
 
-                    <div className="max-w-[300px] space-y-6 mx-auto md:ml-0">
-                        {/* Hero Email Input */}
-                        <InputGeneric width="w-full" type="input" placeholder="email"></InputGeneric>
+                        <div className="max-w-[400px] space-y-6 py-10 mx-auto md:ml-0 md:w-2/3 2xl:py-20">
+                            {/* Hero Email Input */}
+                            <InputGeneric width="w-full" type="input" placeholder="email"></InputGeneric>
 
-                        {/* Hero Register Button */}
-                        <ButtonGeneric bgColor="blue" buttonName="Register" width="w-full"></ButtonGeneric>
+                            {/* Hero Register Button */}
+                            <ButtonGeneric bgColor="blue" buttonName="Register" width="w-full"></ButtonGeneric>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -80,26 +79,26 @@ const Home = () => {
 
             <section className="container-bigger grid grid-rows-2">
                 <DevelopersCard
-                img={developersImg}
-                alt="developers-img"
-                title="Created by Developers for Developers"
-                content="We know how difficult is to keep managing time when creating a project. We can help you do that! DevNote gives the overview of time invested in each project so you will be able to learn which tasks took you longer and create a strategy for future projects."
+                    img={developersImg}
+                    alt="developers-img"
+                    title="Created by Developers for Developers"
+                    content="We know how difficult is to keep managing time when creating a project. We can help you do that! DevNote gives the overview of time invested in each project so you will be able to learn which tasks took you longer and create a strategy for future projects."
                 />
 
                 <DevelopersCard
-                flow="reverse"
-                img={communityImg}
-                alt="community-img"
-                title="Open-Source for the Dev Community"
-                content="DevNote is open to receiving inputs from the development community. Have a great idea on how to improve this project? Make your contribution! The more developers are invested, the better the results." 
+                    flow="reverse"
+                    img={communityImg}
+                    alt="community-img"
+                    title="Open-Source for the Dev Community"
+                    content="DevNote is open to receiving inputs from the development community. Have a great idea on how to improve this project? Make your contribution! The more developers are invested, the better the results."
                 />
             </section>
 
             {/* Call to Action */}
-            <section className="container-bigger my-24 flex flex-col w-6/12 space-y-6 items-center m-auto font-roboto md:text-left">
+            <section className="container-bigger my-24 flex flex-col w-7/12 space-y-6 items-center m-auto font-roboto md:text-left">
                 <h2 className="mb-8 text-2xl tracking-wider text-center">Try it out! It's <span className="font-courier text-orange font-semibold uppercase">free!</span></h2>
 
-                <div className="max-w-[240px] space-y-6">
+                <div className="w-[400px] space-y-6">
                     {/* Call to Action Email Input */}
                     <InputGeneric margin="m-auto" width="w-full" type="input" placeholder="email"></InputGeneric>
 
