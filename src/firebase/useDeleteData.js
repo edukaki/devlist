@@ -8,12 +8,10 @@ const useDeleteData = (user, checkedItems, projectArr, deleteItem) => {
                 const data = await doc(db, 'users', user.uid, 'projects', id);
                 deleteDoc(data)
             }
-            projectArr.map((item, index) => {
-                if (item.key === id) {
-                    return projectArr.splice(index, 1)
-                }
-            })
-            deleteData()
+            projectArr.map((item, index) => (
+                item.key === id && projectArr.splice(index, 1)
+            ))
+            return deleteData()
         })
     }
     deleteItem && handleDelete()
