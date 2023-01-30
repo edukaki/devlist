@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRef } from 'react'
 import { useLayoutEffect } from 'react'
+import { useCallback } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import Heading from '../Heading'
@@ -12,6 +13,15 @@ const DevelopersCard = (props) => {
   const [topPosition, setTopPosition] = useState(null)
   const elementRef = useRef(null)
 
+  const onScroll = useCallback(() => {
+    setTopPosition(elementRef.current.getBoundingClientRect().top)
+    if (topPosition < (window.innerHeight - 300)) {
+      setVisible(true)
+    } else {
+      setVisible(false)
+    }
+  }, [topPosition])
+
   useEffect(() => {
     if (elementRef.current) {
       onScroll()
@@ -22,16 +32,7 @@ const DevelopersCard = (props) => {
     window.addEventListener('scroll', onScroll)
 
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  function onScroll() {
-    setTopPosition(elementRef.current.getBoundingClientRect().top)
-    if (topPosition < (window.innerHeight - 300)) {
-      setVisible(true)
-    } else {
-      setVisible(false)
-    }
-  }
+  }, [onScroll])
 
   return (
     <div ref={elementRef} className={`flex flex-col ${props.flow === "reverse" ? 'md:flex-row-reverse' : 'md:flex-row'} items-center xl:justify-between group`}>
