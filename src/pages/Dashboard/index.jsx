@@ -21,7 +21,7 @@ const Dashboard = () => {
         <main className='grid grid-flow-row container-bigger'>
             {projectArr? 
             <>
-            <section className='container-small pt-6 md:pt-0'>
+            <section className='container-small pt-6 md:pt-16'>
 
                 <Heading type='headingOne' line="left" headingOneContent="My dashboard" />
                 <div className='grid grid-flow-row gap-5 py-6'>

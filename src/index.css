@@ -8,7 +8,7 @@
     }
 
     main {
-        @apply min-h-[calc(100vh-27rem)] pt-16 pb-5 scroll-smooth md:min-h-[calc(100vh-13rem)] md:pt-28;
+        @apply min-h-[calc(100vh-27rem)] pt-[60px] pb-5 scroll-smooth md:min-h-[calc(100vh-13rem)] md:pt-[76px];
     }
 
     footer {
