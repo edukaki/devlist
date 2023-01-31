@@ -15,7 +15,7 @@ export const ProjectContextProvider = ({ children }) => {
 
     useSetData(project, user)
 
-    useGetData(user, setProjectArr, project, projectArr)
+    useGetData(user, setProjectArr, project)
 
     useDeleteData(user,checkedItems,projectArr, deleteItem)
 

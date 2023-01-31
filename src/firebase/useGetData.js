@@ -12,7 +12,7 @@ function useGetData(user, setProjectArr, project, projectArr) {
             })));
         };
         user.uid && getData();
-    }, [project, user.uid, setProjectArr, projectArr]);
+    }, [user,setProjectArr,project]);
 }
 
 export default useGetData
