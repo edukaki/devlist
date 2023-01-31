@@ -6,6 +6,7 @@ const ContactForm = () => {
 
     const contact = useFormik({
         initialValues: {
+            access_key: process.env.REACT_APP_WEB3FORMS_API_KEY,
             firstName: '',
             lastName: '',
             email: '',
@@ -21,11 +22,21 @@ const ContactForm = () => {
             email: Yup.string().email('Invalid email address').required('Required'),
             message: Yup.string().required('Required').min(15, 'Must be at least 15 characters')
         }),
+        onSubmit: values => {
+            console.log(JSON.stringify(values))
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(values),
+            })
+        }
     });
 
     return (
-        <form action='https://api.web3forms.com/submit' netlify method='POST' className="flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[500px]">
-            <input type='hidden' name="access_key" value={process.env.REACT_APP_WEB3FORMS_API_KEY} />
+        <form onSubmit={contact.handleSubmit} className="flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[500px]">
             <label htmlFor="firstName" className="font-semibold">First Name</label>
             <input
                 id="firstName"
