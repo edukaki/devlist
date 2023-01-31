@@ -21,13 +21,11 @@ const ContactForm = () => {
             email: Yup.string().email('Invalid email address').required('Required'),
             message: Yup.string().required('Required').min(15, 'Must be at least 15 characters')
         }),
-        onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
-        },
     });
 
     return (
-        <form onSubmit={contact.handleSubmit} className="flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[500px]">
+        <form action='https://api.web3forms.com/submit' netlify method='POST' className="flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[500px]">
+            <input type='hidden' name="access_key" value={process.env.REACT_APP_WEB3FORMS_API_KEY} />
             <label htmlFor="firstName" className="font-semibold">First Name</label>
             <input
                 id="firstName"
@@ -78,13 +76,15 @@ const ContactForm = () => {
                 onChange={contact.handleChange}
                 onBlur={contact.handleBlur}
                 value={contact.values.message}
-                className="rounded-md py-2 px-3"
+                className="rounded-md py-2 px-3 min-h-[250px]"
             />
             {contact.touched.message && contact.errors.message ? (
                 <div className='errors'>{contact.errors.message}</div>
             ) : null}
 
-                <button type="submit" className="bg-orange text-white text-lg font-semibold p-2 rounded-md w-8/12 m-auto hover:bg-lightOrange hover:text-darkGray active:bg-[#ff8300] active:scale-110 transform duration-500 ease-in-out">Send</button>
+            <input type="hidden" name="redirect" value="http://localhost:3000/" />
+
+            <button type="submit" className="bg-orange text-white text-lg font-semibold p-2 rounded-md w-8/12 m-auto hover:bg-lightOrange hover:text-darkGray active:bg-[#ff8300] active:scale-110 transform duration-500 ease-in-out">Send</button>
         </form>
     );
 };
