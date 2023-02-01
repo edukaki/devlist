@@ -2,7 +2,7 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { v4 as uuid } from 'uuid'
-import { UserProject } from '../../context/ProjectsContext';
+import { UserProject } from '../../../context/ProjectsContext';
 
 const AddProjectForm = () => {
     const { setProject } = UserProject()

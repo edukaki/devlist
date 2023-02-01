@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ContactForm from '../../components/ContactForm'
+import ContactForm from '../../components/Forms/ContactForm'
 import Heading from '../../components/Heading'
 import ParagraphBlock from '../../components/ParagraphBlock'
 import ButtonGeneric from '../../components/ButtonGeneric'

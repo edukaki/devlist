@@ -2,7 +2,7 @@ import Heading from '../../components/Heading'
 import DropdownQuestion from '../../components/DropdownQuestion'
 import Ruler from '../../components/Ruler'
 import faqImg from '../../img/faq/faq.png'
-import ContactForm from '../../components/ContactForm'
+import ContactForm from '../../components/Forms/ContactForm'
 import ParagraphBlock from '../../components/ParagraphBlock'
 import faqHelpImg from '../../img/faq/faq-help.png'
 
