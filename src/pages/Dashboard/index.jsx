@@ -5,7 +5,6 @@ import AddProjectForm from '../../components/AddProjectForm'
 import Heading from '../../components/Heading'
 import ParagraphBlock from '../../components/ParagraphBlock'
 import lightbulb from '../../img/icons/lightbulb.png'
-import { ReactComponent as Line } from '../../img/icons/line.svg'
 import { useState } from 'react'
 import { regular } from "@fortawesome/fontawesome-svg-core/import.macro"
 import { useCardCalc } from "../../common/utils/Hooks/useCardCalc"
@@ -58,8 +57,6 @@ const Dashboard = () => {
             }
         </main>
     )
-
-
 }
 
 export default Dashboard
