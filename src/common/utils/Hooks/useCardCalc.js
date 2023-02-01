@@ -37,23 +37,44 @@ export const useCardCalc = () => {
   }
 
   const getNextDeadline = () => {
-    if(projectArr.length === 0) {
-      return 'No projects yet'
+    var deadlineArr = []
+
+    const getDeadlines = () => {
+      projectArr.map((project) => {
+        const today = new Date()
+        const deadline = () => {
+          if (new Date(project.deadline) >= today) {
+            deadlineArr = [...deadlineArr, new Date(project.deadline)]
+          }
+        }
+        return deadline()
+      })
     }
+    getDeadlines()
+
     const minDate = new Date(
       Math.min(
-        ...projectArr.map((project) => {
+        ...deadlineArr.map((project) => {
           return new Date(project.deadline)
         })
       )
     )
+
+    if (projectArr.length === 0) {
+      return 'No projects yet'
+    }
+
+    if (deadlineArr.length === 0){
+      return 'There are no upcoming deadlines'
+    }
+
     return `${minDate.getDate()}-${minDate.getUTCMonth() + 1}-${minDate.getFullYear()}`
   }
 
   return {
-    active: projectArr&&getActive(),
-    daysTotal: projectArr&&getDaysTotal(),
-    closed: projectArr&&getClosed(),
-    nextDeadline: projectArr&&getNextDeadline()
+    active: projectArr && getActive(),
+    daysTotal: projectArr && getDaysTotal(),
+    closed: projectArr && getClosed(),
+    nextDeadline: projectArr && getNextDeadline()
   }
 }
