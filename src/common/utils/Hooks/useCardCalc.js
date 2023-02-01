@@ -43,7 +43,7 @@ export const useCardCalc = () => {
       projectArr.map((project) => {
         const today = new Date()
         const deadline = () => {
-          if (new Date(project.deadline) >= today) {
+          if (new Date(project.deadline) >= today && project.status !== 'Closed') {
             deadlineArr = [...deadlineArr, new Date(project.deadline)]
           }
         }
@@ -55,7 +55,7 @@ export const useCardCalc = () => {
     const minDate = new Date(
       Math.min(
         ...deadlineArr.map((project) => {
-          return new Date(project.deadline)
+          return project
         })
       )
     )
