@@ -7,14 +7,14 @@ import ParagraphBlock from '../../components/ParagraphBlock'
 import lightbulb from '../../img/icons/lightbulb.png'
 import { useState } from 'react'
 import { regular } from "@fortawesome/fontawesome-svg-core/import.macro"
-import { useCardCalc } from "../../common/utils/Hooks/useCardCalc"
 import arrowCircle from '../../img/icons/arrow-circle.png'
 import { UserProject } from '../../context/ProjectsContext'
+import { cardCalc } from '../../common/utils/Functions/cardCalc'
 
 const Dashboard = () => {
 
     const [btnAdd, setBtnAdd] = useState(false)
-    const cardData = useCardCalc()
+    const cardData = cardCalc()
     const { projectArr } = UserProject()
     return (
         <main className='flex flex-col container-bigger'>
