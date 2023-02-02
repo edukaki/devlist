@@ -10,6 +10,7 @@ const AddProjectForm = () => {
     const formik = useFormik({
         initialValues: {
             key: '',
+            creation: '',
             project: '',
             repository: '',
             client: '',
@@ -37,7 +38,8 @@ const AddProjectForm = () => {
     });
 
     formik.values.key = uuid()
-    
+    formik.values.creation = new Date()
+
     return (
         <form onSubmit={formik.handleSubmit} className="project-form flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[600px]">
             <div className='flex gap-10'>
