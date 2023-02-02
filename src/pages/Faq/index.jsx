@@ -19,7 +19,7 @@ const Faq = () => {
                 :
                 <>
                     <section className='container-bigger container-small flex flex-col md:flex-row'>
-                        <div className="p-4 md:py-16 pr-4 space-y-6 tracking-wider leading-8">
+                        <div className="p-4 md:py-16 pr-4 space-y-6 tracking-wider leading-8 xl:w-8/12">
 
                             <Heading line='left' type='headingOne' headingOneContent="Frequently Asked Questions" />
 
