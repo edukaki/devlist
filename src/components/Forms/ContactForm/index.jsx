@@ -7,7 +7,7 @@ const ContactForm = (props) => {
 
     const contact = useFormik({
         initialValues: {
-            access_key: process.env.REACT_APP_WEB3FORMS_API_KEY,
+            access_key: '',
             firstName: '',
             lastName: '',
             email: '',
@@ -42,6 +42,8 @@ const ContactForm = (props) => {
                 })
         }
     });
+
+    contact.values.access_key= process.env.REACT_APP_WEB3FORMS_API_KEY
 
     return (
         <form onSubmit={contact.handleSubmit} className="flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[500px]">
