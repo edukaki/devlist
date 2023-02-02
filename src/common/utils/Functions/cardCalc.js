@@ -1,7 +1,7 @@
 import { UserProject } from '../../../context/ProjectsContext'
 
 
-export const useCardCalc = () => {
+export const cardCalc = () => {
 
   const { projectArr } = UserProject()
 
