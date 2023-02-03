@@ -10,18 +10,22 @@ import { regular } from "@fortawesome/fontawesome-svg-core/import.macro"
 import arrowCircle from '../../img/icons/arrow-circle.png'
 import { UserProject } from '../../context/ProjectsContext'
 import { cardCalc } from '../../common/utils/Functions/cardCalc'
+import sortArr from '../../common/utils/Functions/sortArr'
 
 const Dashboard = () => {
 
     const [btnAdd, setBtnAdd] = useState(false)
     const cardData = cardCalc()
-    const { projectArr } = UserProject()
+    const { projectArr, sortedArr, setSortedArr } = UserProject()
+
+    function handleSort(filter, order, arr) {
+        setSortedArr(sortArr(arr ? arr : projectArr, filter, order))
+    }
     return (
         <main className='flex flex-col container-bigger'>
             {projectArr ?
                 <>
                     <section className='container-small pt-6 md:pt-16'>
-
                         <Heading type='headingOne' line="left" headingOneContent="My dashboard" />
                         <div className='grid grid-flow-row gap-5 py-6'>
                             <div className='flex flex-row h-10 justify-between items-center lg:hidden'>
@@ -48,7 +52,7 @@ const Dashboard = () => {
                             <ProjectCard title='Total time' icon={regular('clock')} content={`${cardData.daysTotal} days`} footer='Invested in all projects' fromColor='from-lime-300' toColor='to-sky-500' />
                             <ProjectCard title='Next deadline' icon={regular('hourglass')} content={`${cardData.nextDeadline} `} footer='The next project deadline' fromColor='from-red-500' toColor='to-amber-200' />
                         </div>
-                        <ProjectListItem btnFunction={{ btnAdd, setBtnAdd }} />
+                        <ProjectListItem btnFunction={{ btnAdd, setBtnAdd }} sortFunction={{ sortedArr, handleSort }} />
                     </section>
                 </> :
                 <section className='m-auto'>
@@ -60,3 +64,4 @@ const Dashboard = () => {
 }
 
 export default Dashboard
+
