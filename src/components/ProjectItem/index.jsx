@@ -3,6 +3,7 @@ import { UserProject } from '../../context/ProjectsContext'
 
 const ProjectItem = (props) => {
     const { checkedItems, setCheckedItems } = UserProject()
+    const today = new Date()
 
     const handleChange = (event) => {
         var updatedList = [...checkedItems]
@@ -26,7 +27,7 @@ const ProjectItem = (props) => {
             }
             <span className='hidden md:block'>{props.client ? props.client : 'Personal'}</span>
             <span className='hidden md:block'>{props.start}</span>
-            <span>{props.deadline}</span>
+            <span className={`${new Date(props.deadline).setHours(0,0,0,0) < today.setHours(0,0,0,0) && props.status !== 'Closed' ? 'text-red-500 font-bold' : ''}`}>{props.deadline}</span>
 
             <span className='flex justify-center'>
                 {
