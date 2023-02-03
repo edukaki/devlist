@@ -11,6 +11,7 @@ import arrowCircle from '../../img/icons/arrow-circle.png'
 import { UserProject } from '../../context/ProjectsContext'
 import { cardCalc } from '../../common/utils/Functions/cardCalc'
 import sortArr from '../../common/utils/Functions/sortArr'
+import filterArr from '../../common/utils/Functions/filterArr'
 
 const Dashboard = () => {
 
@@ -47,10 +48,10 @@ const Dashboard = () => {
                     </section>
                     <section className='flex flex-col container-small'>
                         <div className='max-w-full grid grid-flow-row gap-8 py-3 xl:max-h-72 md:py-6 md:grid-cols-2 xl:grid-cols-4'>
-                            <ProjectCard title='Ongoing' icon={arrowCircle} alt='arrow circle icon' content={`${cardData.active} projects`} footer='Open projects' fromColor='from-amber-400' toColor='to-amber-200' />
-                            <ProjectCard title='Closed' icon={regular('circle-check')} content={`${cardData.closed} projects`} footer='Closed and achieved projects' fromColor='from-lime-600' toColor='to-amber-200' />
-                            <ProjectCard title='Total time' icon={regular('clock')} content={`${cardData.daysTotal} days`} footer='Invested in all projects' fromColor='from-lime-300' toColor='to-sky-500' />
-                            <ProjectCard title='Next deadline' icon={regular('hourglass')} content={`${cardData.nextDeadline} `} footer='The next project deadline' fromColor='from-red-500' toColor='to-amber-200' />
+                            <ProjectCard onClick={() => { handleSort('creation') }} title='All' icon={regular('clock')} content={`${projectArr.length} projects`} footer={`${cardData.daysTotal} days invested in all projects`} fromColor='from-amber-400' toColor='to-amber-200' />
+                            <ProjectCard onClick={() => { handleSort('creation', '', filterArr(projectArr, ["Active"])) }} title='Ongoing' icon={arrowCircle} alt='arrow circle icon' content={`${cardData.active} projects`} footer='Open projects' fromColor='from-lime-600' toColor='to-amber-200' />
+                            <ProjectCard onClick={() => { handleSort('creation', '', filterArr(projectArr, ["Closed"])) }} title='Closed' icon={regular('circle-check')} content={`${cardData.closed} projects`} footer='Closed and achieved projects' fromColor='from-lime-300' toColor='to-sky-500' />
+                            <ProjectCard onClick={() => { handleSort('deadline', 'ascending', filterArr(projectArr, ["Active", "Paused"])) }} title='Next deadline' icon={regular('hourglass')} content={`${cardData.nextDeadline} `} footer='The next project deadline' fromColor='from-red-500' toColor='to-amber-200' />
                         </div>
                         <ProjectListItem btnFunction={{ btnAdd, setBtnAdd }} sortFunction={{ sortedArr, handleSort }} />
                     </section>
