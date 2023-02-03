@@ -41,7 +41,7 @@ export const cardCalc = () => {
 
     const getDeadlines = () => {
       projectArr.map((project) => {
-        const today = new Date()
+        const today = new Date().setHours(0,0,0,0)
         const deadline = () => {
           if (new Date(project.deadline) >= today && project.status !== 'Closed') {
             deadlineArr = [...deadlineArr, new Date(project.deadline)]
@@ -65,7 +65,7 @@ export const cardCalc = () => {
     }
 
     if (deadlineArr.length === 0){
-      return 'There are no upcoming deadlines'
+      return 'No upcoming deadlines'
     }
 
     return `${minDate.getDate()}-${minDate.getUTCMonth() + 1}-${minDate.getFullYear()}`
