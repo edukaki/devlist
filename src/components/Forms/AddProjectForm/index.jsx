@@ -42,7 +42,7 @@ const AddProjectForm = () => {
 
     return (
         <form onSubmit={formik.handleSubmit} className="project-form flex flex-col py-6 font-courier text-darkGray space-y-3 m-auto max-w-[600px]">
-            <div className='flex gap-10'>
+            <div className='flex gap-5 md:gap-10'>
                 <div className='label-input'>
                     <label className='form-label' htmlFor="project">Project name</label>
                     <input
