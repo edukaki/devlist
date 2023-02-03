@@ -6,8 +6,9 @@ import filterIcon from '../../img/icons/filter.png'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const ProjectListItem = (props) => {
-    const { projectArr, handleDelete } = UserProject()
+    const { handleDelete } = UserProject()
     const { btnAdd, setBtnAdd } = props.btnFunction
+    const { sortedArr } = props.sortFunction
 
     return (
         <>
@@ -33,7 +34,7 @@ const ProjectListItem = (props) => {
             </div>
             <div className='w-full px-3 pb-20 mb-20 md:px-6 bg-slate-200'>
                 <div className='font-bold'><ProjectItem project='Project' client='Client' start='Start date' deadline='Deadline' indicator='Status' /></div>
-                {projectArr.map((project, index) => (
+                {sortedArr.map((project, index) => (
                     <ProjectItem
                         key={index}
                         dataKey={project.key}
