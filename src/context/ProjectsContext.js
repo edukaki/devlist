@@ -10,21 +10,22 @@ export const ProjectContextProvider = ({ children }) => {
     const { user } = UserAuth()
     const [project, setProject] = useState(null)
     const [projectArr, setProjectArr] = useState(null)
+    const [sortedArr, setSortedArr] = useState(null)
     const [checkedItems, setCheckedItems] = useState([])
     const [deleteItem, setDeleteItem] = useState(false)
 
     useSetData(project, user)
 
-    useGetData(user, setProjectArr, project)
+    useGetData(user, setProjectArr, project, setSortedArr)
 
-    useDeleteData(user,checkedItems,projectArr, deleteItem)
+    useDeleteData(user, checkedItems, sortedArr, deleteItem, setDeleteItem)
 
     function handleDelete() {
         setDeleteItem(true)
     }
 
     return (
-        <ProjectContext.Provider value={{ setProject, projectArr, checkedItems, setCheckedItems, handleDelete}}>
+        <ProjectContext.Provider value={{ setProject, projectArr, sortedArr, setSortedArr, checkedItems, setCheckedItems, handleDelete }}>
             {children}
         </ProjectContext.Provider>
     )
