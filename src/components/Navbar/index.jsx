@@ -66,14 +66,14 @@ const Navbar = () => {
                                         <Link to={
                                             !user ? '/signin' :
                                                 `/dashboard/user?:${user.uid}`}
-                                            className="block px-4 py-2 hover:bg-gray-100">Dashboard</Link>
+                                            onClick={() => setAvatarMenu(false)} className="block px-4 py-2 hover:bg-gray-100">Dashboard</Link>
                                     </li>
                                     <li>
-                                        <Link to='/settings' className="block px-4 py-2 hover:bg-gray-100">Settings</Link>
+                                        <Link to='/settings' onClick={() => setAvatarMenu(false)} className="block px-4 py-2 hover:bg-gray-100">Settings</Link>
                                     </li>
                                     <li>
                                         <div className="block px-4 py-2 hover:bg-gray-100 hover:cursor-pointer"
-                                            onClick={() => handleSignOut()}>Logout</div>
+                                            onClick={() => handleSignOut() && setAvatarMenu(false)}>Logout</div>
                                     </li>
                                 </ul>
                             </div>
@@ -89,22 +89,22 @@ const Navbar = () => {
                     <div ref={refHamburger} className={`${hamburgerMenu ? '' : 'hidden'} items-center justify-between w-full md:flex md:w-auto md:order-1 ${hamburgerMenu ? 'absolute top-14 left-0 text-center  bg-white divide-y divide-gray-100 rounded' : ''}`}>
                         <ul className="flex flex-col p-4 mt-4 font-bold text-base md:flex-row md:space-x-8 md:mt-0">
                             <li>
-                                <Link to='/' className="block py-2 pl-3 pr-4 hover:text-orange text-gray-700 md:p-0" aria-current="page">Home</Link>
+                                <Link to='/' onClick={() => setHamburgerMenu(false)} className="block py-2 pl-3 pr-4 hover:text-orange text-gray-700 md:p-0" aria-current="page">Home</Link>
                             </li>
                             <li>
                                 <Link to={
                                     !user ? '/signin' :
                                         `/dashboard/user?:${user.uid}`}
-                                    className="block py-2 pl-3 pr-4 hover:text-orange text-gray-700 md:p-0">Dashboard</Link>
+                                    onClick={() => setHamburgerMenu(false)} className="block py-2 pl-3 pr-4 hover:text-orange text-gray-700 md:p-0">Dashboard</Link>
                             </li>
                             <li>
-                                <Link to='/about' className="block py-2 pl-3 pr-4 hover:text-orange text-gray-700 md:p-0">About</Link>
+                                <Link to='/about' onClick={() => setHamburgerMenu(false)} className="block py-2 pl-3 pr-4 hover:text-orange text-gray-700 md:p-0">About</Link>
                             </li>
                             <li>
-                                <Link to='/contact' className="block py-2 pl-3 pr-4 hover:text-orange text-gray-700 md:p-0">Contact</Link>
+                                <Link to='/contact' onClick={() => setHamburgerMenu(false)} className="block py-2 pl-3 pr-4 hover:text-orange text-gray-700 md:p-0">Contact</Link>
                             </li>
                             <li>
-                                <Link to='/faq' className="block py-2 pl-3 pr-4 hover:text-orange text-gray-700 md:p-0">FAQ</Link>
+                                <Link to='/faq' onClick={() => setHamburgerMenu(false)} className="block py-2 pl-3 pr-4 hover:text-orange text-gray-700 md:p-0">FAQ</Link>
                             </li>
                         </ul>
                     </div>
