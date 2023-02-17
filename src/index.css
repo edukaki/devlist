@@ -3,49 +3,50 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply flex flex-col font-roboto text-base bg-lightGray;
-    }
+  body {
+    @apply flex flex-col font-roboto text-base bg-lightGray;
+  }
 
-    main {
-        @apply min-h-[calc(100vh-27rem)] pt-[60px] pb-5 scroll-smooth md:min-h-[calc(100vh-13rem)] md:pt-[76px];
-    }
+  main {
+    @apply min-h-[calc(100vh-27rem)] pt-[60px] pb-5 scroll-smooth md:min-h-[calc(100vh-13rem)] md:pt-[76px];
+  }
 
-    footer {
-        @apply w-full font-courier text-2xl;
-    }
+  footer {
+    @apply w-full font-courier text-2xl;
+  }
 }
 
 @layer components {
-    .container-bigger{
-        @apply max-w-[1536px] m-auto
-    }
+  .container-bigger {
+    @apply max-w-[1536px] m-auto;
+  }
 
-    .container-small{
-        @apply px-3 md:px-6 2xl:px-0
-    }
+  .container-small {
+    @apply px-3 md:px-6 2xl:px-0;
+  }
 
-    .form-label{
-        @apply font-courier font-bold text-xl
-    }
+  .form-label {
+    @apply font-courier font-bold text-xl;
+  }
 
-    .input-generic{
-        @apply w-full px-3 py-2 rounded-md border-2 text-slate-500 focus:outline-none focus:border-orange;
-    }
+  .input-generic {
+    @apply w-full px-3 py-2 rounded-md border-2 text-slate-500 focus:outline-none focus:border-orange;
+  }
 
-    .label-input{
-        @apply flex flex-col w-full
-    }
+  .label-input {
+    @apply flex flex-col w-full;
+  }
 
-    .project-form{
-        @apply flex flex-col m-auto p-6 lg:w-6/12
-    }
+  .project-form {
+    @apply flex flex-col m-auto p-6 lg:w-6/12;
+  }
 
-    .project-form input, select{
-        @apply input-generic
-    }
-    
-    .errors{
-        @apply text-orange
-    }
+  .project-form input,
+  select {
+    @apply input-generic;
+  }
+
+  .errors {
+    @apply text-orange;
+  }
 }

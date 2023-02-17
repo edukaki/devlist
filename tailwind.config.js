@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -17,18 +15,16 @@ module.exports = {
         green: '#69B848',
       },
       backgroundImage: {
-        "heroImg-bigger": "url('/public/img/home/hero-img-bigger.png')",
-        "heroImg-desktop": "url('/public/img/home/hero-img-desktop.png')",
-        "heroImg-mobile": "url('/public/img/home/hero-img-mobile.png')",
-        signinImg: "url('/public/img/signin/fun-bg.png')"
-      }
+        'heroImg-bigger': "url('/public/img/home/hero-img-bigger.png')",
+        'heroImg-desktop': "url('/public/img/home/hero-img-desktop.png')",
+        'heroImg-mobile': "url('/public/img/home/hero-img-mobile.png')",
+        signinImg: "url('/public/img/signin/fun-bg.png')",
+      },
     },
     fontFamily: {
-      courier: ["Courier Prime", "monospace"],
-      roboto: ["Roboto", "sans-serif"],
+      courier: ['Courier Prime', 'monospace'],
+      roboto: ['Roboto', 'sans-serif'],
     },
   },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-  ],
-}
+  plugins: [require('@tailwindcss/line-clamp')],
+};
