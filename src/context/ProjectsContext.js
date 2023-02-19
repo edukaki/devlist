@@ -4,6 +4,7 @@ import { UserAuth } from './AuthContext';
 import useSetData from '../firebase/useSetData';
 import useGetData from '../firebase/useGetData';
 import useDeleteData from '../firebase/useDeleteData';
+import PropTypes from 'prop-types';
 
 const ProjectContext = createContext();
 
@@ -44,4 +45,8 @@ export const ProjectContextProvider = ({ children }) => {
 
 export const UserProject = () => {
   return useContext(ProjectContext);
+};
+
+ProjectContextProvider.propTypes = {
+  children: PropTypes.node,
 };

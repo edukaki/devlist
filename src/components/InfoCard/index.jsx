@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const InfoCard = (props) => {
   return (
@@ -15,3 +16,10 @@ const InfoCard = (props) => {
 };
 
 export default InfoCard;
+
+InfoCard.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+};

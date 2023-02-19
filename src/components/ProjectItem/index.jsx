@@ -1,5 +1,6 @@
 import React from 'react';
 import { UserProject } from '../../context/ProjectsContext';
+import PropTypes from 'prop-types';
 
 const ProjectItem = (props) => {
   const { checkedItems, setCheckedItems } = UserProject();
@@ -56,3 +57,14 @@ const ProjectItem = (props) => {
 };
 
 export default ProjectItem;
+
+ProjectItem.propTypes = {
+  project: PropTypes.string,
+  client: PropTypes.string,
+  start: PropTypes.string,
+  deadline: PropTypes.string,
+  status: PropTypes.string,
+  indicator: PropTypes.string,
+  check: PropTypes.bool,
+  dataKey: PropTypes.string,
+};

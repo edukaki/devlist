@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 const Heading = (props) => {
   const type = props.type;
   const line = () => {
@@ -34,3 +35,10 @@ const Heading = (props) => {
 };
 
 export default Heading;
+
+Heading.propTypes = {
+  type: PropTypes.string,
+  headingOneContent: PropTypes.string,
+  headingTwoContent: PropTypes.string,
+  line: PropTypes.string,
+};

@@ -7,6 +7,7 @@ import {
   onAuthStateChanged,
 } from 'firebase/auth';
 import { auth } from '../firebase/firebase';
+import PropTypes from 'prop-types';
 
 const AuthContext = createContext();
 
@@ -40,4 +41,8 @@ export const AuthContextProvider = ({ children }) => {
 
 export const UserAuth = () => {
   return useContext(AuthContext);
+};
+
+AuthContextProvider.propTypes = {
+  children: PropTypes.node,
 };

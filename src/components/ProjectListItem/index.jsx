@@ -5,6 +5,7 @@ import { UserProject } from '../../context/ProjectsContext';
 import ProjectItem from '../ProjectItem';
 import filterIcon from '../../img/icons/filter.png';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 const ProjectListItem = (props) => {
   const { handleDelete } = UserProject();
@@ -72,3 +73,8 @@ const ProjectListItem = (props) => {
 };
 
 export default ProjectListItem;
+
+ProjectListItem.propTypes = {
+  btnFunction: PropTypes.object,
+  sortFunction: PropTypes.object,
+};

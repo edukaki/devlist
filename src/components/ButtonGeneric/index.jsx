@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ButtonGeneric = (props) => {
   return (
@@ -18,3 +19,10 @@ const ButtonGeneric = (props) => {
 };
 
 export default ButtonGeneric;
+
+ButtonGeneric.propTypes = {
+  bgColor: PropTypes.string,
+  textColor: PropTypes.string,
+  width: PropTypes.string,
+  buttonName: PropTypes.string,
+};

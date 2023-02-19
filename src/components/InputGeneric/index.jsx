@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const InputGeneric = (props) => {
   return (
@@ -11,3 +12,10 @@ const InputGeneric = (props) => {
 };
 
 export default InputGeneric;
+
+InputGeneric.propTypes = {
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  margin: PropTypes.string,
+  width: PropTypes.string,
+};

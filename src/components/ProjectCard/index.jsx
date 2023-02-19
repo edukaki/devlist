@@ -1,5 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
 
 const ProjectCard = (props) => {
   return (
@@ -28,3 +29,14 @@ const ProjectCard = (props) => {
 };
 
 export default ProjectCard;
+
+ProjectCard.propTypes = {
+  icon: PropTypes.string,
+  alt: PropTypes.string,
+  title: PropTypes.string,
+  content: PropTypes.string,
+  footer: PropTypes.string,
+  fromColor: PropTypes.string,
+  toColor: PropTypes.string,
+  onClick: PropTypes.func,
+};

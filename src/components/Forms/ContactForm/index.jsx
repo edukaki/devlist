@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 
 const ContactForm = (props) => {
   const { setRedirect } = props.redirect;
@@ -129,3 +130,7 @@ const ContactForm = (props) => {
 };
 
 export default ContactForm;
+
+ContactForm.propTypes = {
+  redirect: PropTypes.object,
+};

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Heading from '../Heading';
+import PropTypes from 'prop-types';
 
 const DropdownQuestion = (props) => {
   const [open, setOpen] = useState(false);
@@ -27,3 +28,9 @@ const DropdownQuestion = (props) => {
 };
 
 export default DropdownQuestion;
+
+DropdownQuestion.propTypes = {
+  text: PropTypes.string,
+  paragraphContent: PropTypes.string,
+  bgColor: PropTypes.string,
+};

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ParagraphBlock = (props) => {
   return (
@@ -13,3 +14,9 @@ const ParagraphBlock = (props) => {
 };
 
 export default ParagraphBlock;
+
+ParagraphBlock.propTypes = {
+  paragraphContent: PropTypes.string,
+  bgColor: PropTypes.string,
+  fontSize: PropTypes.string,
+};

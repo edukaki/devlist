@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Heading from '../Heading';
 import ParagraphBlock from '../ParagraphBlock';
+import PropTypes from 'prop-types';
 
 const DevelopersCard = (props) => {
   const [visible, setVisible] = useState(false);
@@ -73,3 +74,11 @@ const DevelopersCard = (props) => {
 };
 
 export default DevelopersCard;
+
+DevelopersCard.propTypes = {
+  flow: PropTypes.oneOf(['reverse', 'normal']),
+  img: PropTypes.string,
+  alt: PropTypes.string,
+  title: PropTypes.string,
+  content: PropTypes.string,
+};
