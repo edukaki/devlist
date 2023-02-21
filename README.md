@@ -1,70 +1,205 @@
-# Getting Started with Create React App
+# DevNote - The Ultimate Developer Tool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DevNote is a Free platform where you can keep track of your development projects. With DevNote you can track the time invested in each project, have an overview of which projects are ongoing and which ones are closed, and most importantly learn to optimize your time and deliver by the deadline.
 
-## Available Scripts
+<img src="public/img/screenshots/devnote-screenshot-1.png" width=100% alt="DevNote section one">
+<img src="public/img/screenshots/devnote-screenshot-2.png" width=100% alt="DevNote section one">
+<img src="public/img/screenshots/devnote-screenshot-3.png" width=100% alt="DevNote section one">
+<img src="public/img/screenshots/devnote-screenshot-4.png" width=100% alt="DevNote section one">
+<img src="public/img/screenshots/devnote-screenshot-5.png" width=100% alt="DevNote section one">
 
-In the project directory, you can run:
+### Check out DevNote [here]( https://edukaki-devnote.netlify.app)
 
-### `npm start`
+## Development Process
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Coming up with key concepts and functionalities;
+- Sketching the logic behind DevNote;
+- Implementation of functionalities using Firebase;
+- Design the user interface;
+- Content creation;
+- Development of the user interface from a mobile-first perspective.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built with
 
-### `npm test`
+- Semantic HTML5 markup;
+- Tailwindcss framework;
+- Flexbox;
+- CSS Grid;
+- Mobile-first workflow.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies and Tools
 
-### `npm run build`
+- [Firebase](https://firebase.google.com/)
+- [React - JS library](https://reactjs.org/)
+- [Tailwindcss](http://tailwindcss.com)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Requirements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To work with the code, you will need, before you begin, to install in your machine Git and to have a source-code editor such as VSCode.
+Please, also use ‘npm install’ command to install all dependencies such as React and Tailwindcss.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What we learned
 
-### `npm run eject`
+### How to create a context to listen when the user is logged in:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+~~~
+import { useContext, createContext } from "react";
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+const AuthContext = createContext()
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+export const AuthContextProvider = ({children}) => {
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+return (
 
-## Learn More
+{children}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+}
 
-### Code Splitting
+export const UserAuth = () => {
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+return useContext(AuthContext)
 
-### Analyzing the Bundle Size
+~~~
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### create a new provider inside auth context to login with google or even other providers:
 
-### Making a Progressive Web App
+~~~
+import {
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+GoogleAuthProvider,
 
-### Advanced Configuration
+signInWithPopup,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+signInWithRedirect,
 
-### Deployment
+signOut,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+onAuthStateChanged
 
-### `npm run build` fails to minify
+} from "firebase/auth";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+//////////////////////////////////////////////////////////
+
+const googleSignIn = () => {
+
+const provider = new GoogleAuthProvider()
+
+signInWithPopup(auth,provider)
+
+}
+
+~~~	
+
+### Inside sign in page, the login method
+
+~~~
+const { googleSignIn } = UserAuth();
+
+const handleGoogleSignIn = async () => {
+
+try{
+
+await googleSignIn()
+
+}
+
+catch(error){
+
+console.log(error)
+
+}
+
+}
+
+~~~
+
+### inside auth context, add function to get the currently signed-in user:
+~~~
+
+useEffect(() => {
+
+const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
+
+setUser(currentUser)
+
+})
+
+return () => {
+
+unsubscribe()
+
+}
+
+},[])
+
+~~~
+
+### inside the navbar , add function to handle the sign out
+~~~
+const handleSignOut = async () => {
+
+try{
+
+await logOut()
+
+} catch(error){
+
+console.log(error)
+
+}
+
+}
+
+~~~
+
+### Prevents a logged-in users from accessing the login page
+
+~~~
+const { googleSignIn, user } = UserAuth()
+
+useEffect(() => {
+
+if(user !== null){
+
+navigate('/')
+
+}
+
+},[user])
+
+~~~
+
+### Component created to protect private pages from non-logged in users
+~~~
+import { Navigate } from "react-router-dom"
+
+import { UserAuth } from "../../context/AuthContext"
+
+const Protected = ({ children }) => {
+
+const { user } = UserAuth()
+
+if(!user){
+
+return
+
+}
+
+return children
+
+}
+
+export default Protected;
+
+~~~
+
+
+## Useful resources
+- [A guide to adding gradients with Tailwind CSS](https://blog.logrocket.com/guide-adding-gradients-tailwind-css/): This is a great article that helped us understand the different approaches and possibilities for adding gradients on elements using Tailwindcss. I'd recommend it to anyone still learning this concept.
+
+## Acknowledgments
+This is a project made by two developers as a team. We want our team to spend and receive your contribution.
+
+### Made with :heart: by [Eduardo Arakaki] (https://www.linkedin.com/in/eduardo-arakaki/) and [Caroline Almeida Nikolic] (https://www.linkedin.com/in/carolinealmeidanikolic/)
